@@ -121,17 +121,17 @@ body {
     cursor: pointer;
 }
 
-.content-div {
+.dashboard-content-div {
   margin: 20px 15%;
   width: 80%;
 }
 
-.content-header-div {
+.dashboard-content-header-div {
   display: flex;
   flex-direction: column;
 }
 
-.content-header > h3 {
+.dashboard-content-header > h3 {
   font-size: 2rem;
   color: var(--color-primary);
   font-weight: 700;
@@ -139,7 +139,7 @@ body {
   letter-spacing: 0.5px;
 }
 
-.content-header > p {
+.dashboard-content-header > p {
   font-size: 1rem;
   color: var(--color-text-muted);
   font-weight: 400;
@@ -147,19 +147,19 @@ body {
   letter-spacing: 0.3px;
 }
 
-.content-time {
+.dashboard-content-time {
   display: flex;
   gap: 0.5rem;
 }
 
-.content-time {
+.dashboard-content-time {
   display: flex;
   margin: 1rem 0;
   width: max-content;
   background-color: var(--color-bg-light); 
 }
 
-.content-time > div {
+.dashboard-content-time > div {
   padding: 0.5rem 1rem;
   border-radius: 8px;
   background-color: var(--color-bg-light); 
@@ -170,14 +170,14 @@ body {
   transition: all 0.3s ease;
 }
 
-.content-time > div:hover {
+.dashboard-content-time > div:hover {
   background-color: var(--color-primary);
   color: var(--color-white);
   transform: translateY(-2px) scale(1.03);
   box-shadow: 0 4px 10px rgba(91, 33, 182, 0.25);
 }
 
-.content-time > div:nth-child(2) {
+.dashboard-content-time > div:nth-child(2) {
   background-color: var(--color-primary);
   color: var(--color-white);
   transform: translateY(-2px) scale(1.03);
@@ -329,4 +329,11 @@ body {
   font-size: 1.1rem;
 }
 
+.travel-icon {
+  margin-right: 6px;
+  color: var(--color-text-muted);
+}
 /* Bank Card Element Ends */
+
+/* Spent This Month */
+
