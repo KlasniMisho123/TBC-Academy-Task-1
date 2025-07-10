@@ -131,34 +131,6 @@ body {
   flex-direction: column;
 }
 
-.content-time {
-  display: flex;
-  width: max-content;
-  background-color: var(--color-bg-light); 
-}
-
-.content-time > div {
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  background-color: var(--color-bg-light); 
-  color: var(--color-text-dark);
-  font-weight: 500;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-}
-
-.content-time > div:nth-child(2) {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  font-weight: 600;
-}
-
-.content-time > div:hover {
-  background-color: var(--color-white);
-  color: var(--color-text-dark);
-}
-
 .content-header > h3 {
   font-size: 2rem;
   color: var(--color-primary);
@@ -169,10 +141,47 @@ body {
 
 .content-header > p {
   font-size: 1rem;
-  color: var(--color-text-muted); 
+  color: var(--color-text-muted);
   font-weight: 400;
   margin-top: 0;
   letter-spacing: 0.3px;
+}
+
+.content-time {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.content-time {
+  display: flex;
+  margin: 1rem 0;
+  width: max-content;
+  background-color: var(--color-bg-light); 
+}
+
+.content-time > div {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: var(--color-bg-light); 
+  color: var(--color-text-dark);
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.content-time > div:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 10px rgba(91, 33, 182, 0.25);
+}
+
+.content-time > div:nth-child(2) {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 10px rgba(91, 33, 182, 0.25);
 }
 
 .brand-name {
