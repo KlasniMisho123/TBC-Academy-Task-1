@@ -238,6 +238,10 @@ body {
 .gear {
   transition: transform 0.4s ease;
   cursor: pointer;
+  padding: 0.5rem;
+  border: 1px solid var(--color-text-muted);
+  border-radius: 100%;
+  color: var(--color-text-dark);
 }
 .credit-card {
   margin-right: 6px;
@@ -371,10 +375,10 @@ body {
 .recent-transactions-content {
   flex: 8;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
-
 
 .recent-transactions-div > button {
   overflow: hidden;
@@ -400,6 +404,9 @@ body {
   transform: translate(20px, -150%);
 }
 
+.recent-transaction-item {
+  
+}
 
 .montly-expanses-div {
   background-color: #EF4444;
