@@ -1,5 +1,6 @@
 body {
   font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
   background: #ffffff;
   margin: 0;
   padding: 0;
@@ -234,7 +235,7 @@ body {
   margin: 5px 10px;
 }
 
-.card-header .gear {
+.gear {
   transition: transform 0.4s ease;
   cursor: pointer;
 }
@@ -242,7 +243,7 @@ body {
   margin-right: 6px;
   color: var(--color-primary);
 }
-.card-header .gear:hover {
+.gear:hover {
   transform: rotate(90deg);
 }
 
@@ -335,5 +336,51 @@ body {
 }
 /* Bank Card Element Ends */
 
-/* Spent This Month */
+/* Expanses Element Starts */
 
+.expanses-content {
+  margin: 4rem 0px ;
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+}
+
+.recent-transactions-div {
+  background-color: #10B981;
+  /* height: auto; */
+  height: 40vh;
+  border-radius: 16px;
+  background: var(--color-bg-light);
+  color: var(--color-text-dark);
+  padding: 1rem;
+  box-shadow: 0 4px 4px rgba(91, 33, 182, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  /* border: 0.25px solid var(--color-text-muted); */
+}
+
+.recent-transactions-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recent-transactions-div > button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+
+.montly-expanses-div {
+  background-color: #EF4444;
+  flex: 2;
+}
+
+/* Expanses Element Ends */
