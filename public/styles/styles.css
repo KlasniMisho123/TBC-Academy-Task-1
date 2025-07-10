@@ -348,7 +348,7 @@ body {
 .recent-transactions-div {
   background-color: #10B981;
   /* height: auto; */
-  height: 40vh;
+  height: 50vh;
   border-radius: 16px;
   background: var(--color-bg-light);
   color: var(--color-text-dark);
@@ -362,19 +362,42 @@ body {
 }
 
 .recent-transactions-header {
+  flex: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+.recent-transactions-content {
+  flex: 8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
 .recent-transactions-div > button {
+  overflow: hidden;
+  flex: 1;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   justify-content: center;
-  padding: 6px;
+  padding: 2px;
   border-radius: 8px;
   margin: 10px;
+  cursor: pointer;
+}
+
+.recent-transactions-div > button:hover {
+  transition: all 0.5s ease;
+  background-color: var(--color-text-dark);
+  color: var(--color-white);
+}
+
+.recent-transactions-div > button:hover > i {
+  transition: all 0.5s ease;
+  transform: translate(20px, -150%);
 }
 
 
