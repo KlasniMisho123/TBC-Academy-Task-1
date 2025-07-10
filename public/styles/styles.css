@@ -374,6 +374,7 @@ body {
   flex: 8;
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
   align-items: center;
   justify-content: space-between;
 }
@@ -412,6 +413,7 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   gap: 1rem;
+  width: 90%;
 }
 
 /* Logo */
