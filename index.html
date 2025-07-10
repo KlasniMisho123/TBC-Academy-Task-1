@@ -3,9 +3,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/styles/styles.css" >
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> -->
     <title>Banking Dashboard</title>
+    <!-- TEMP -->
+    <link rel="icon" href="public/images/tbc-logo.png" type="image/png">
 </head>
 <body>
-    <section class="css-check"> WHHATEVER SECTION </section>
+    <header class="dashboard-header">
+  <div class="header-container">
+    <!-- Logo/Brand -->
+    <div class="brand">
+      <img src="assets/logo.svg" alt="Bank Logo" class="logo">
+      <h1 class="bank-name">FinEdge</h1>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li class="nav-item active">
+          <a href="#" class="nav-link">
+            <i class="icon-dashboard"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="icon-transactions"></i>
+            <span>Transactions</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="icon-cards"></i>
+            <span>Cards</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="icon-accounts"></i>
+            <span>Accounts</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    
+    <!-- User Profile/Controls -->
+    <div class="user-controls">
+      <button class="notifications-btn">
+        <i class="icon-bell"></i>
+        <span class="notification-badge">3</span>
+      </button>
+      <div class="user-profile">
+        <img src="assets/user-avatar.jpg" alt="User Profile" class="user-avatar">
+        <span class="user-name">John Doe</span>
+        <i class="icon-chevron-down"></i>
+      </div>
+    </div>
+  </div>
+</header>
 </body>
 </html>

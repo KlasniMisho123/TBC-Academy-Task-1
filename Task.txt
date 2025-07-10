@@ -1,0 +1,66 @@
+Frontend Development Course - Technical Tasks
+
+📌 First Task:
+
+Objective:
+Using only pure HTML and CSS, design and develop a user-friendly banking dashboard that is both visually appealing and responsive across all device types (desktop, tablet, and mobile).
+This project challenges your imagination, creativity, and research skills—feel free to explore existing banking apps or UI inspiration platforms like Dribbble, Behance, or Figma for ideas.
+
+Project Requirements
+General Guidelines
+Do not use JavaScript or any CSS frameworks (e.g., Bootstrap, Tailwind). Stick to pure HTML and CSS.
+
+Your project should include separate HTML files for each page.
+
+Ensure the layout is fully responsive and maintains a consistent design system throughout.
+
+Dashboard Page
+A navigation bar with a user profile section (e.g., profile picture, name).
+
+Display of the user’s bank accounts and balances in a clean, organized format (cards or list).
+
+A section showing the total amount spent this month ("Money Spent") — use a visual indicator like a progress bar or graph if you like.
+
+Transactions Page
+
+• A well-structured transaction history list including: Date, Transaction name, Amount,
+  Category or type (optional)
+
+• Use clean, readable formatting with appropriate spacing and contrast.
+
+Creative Freedom
+
+• You are encouraged to experiment and add your own creative touches.
+• Think about user experience, modern UI trends, and accessibility.
+
+Bonus ideas (optional):
+
+• Add icons to improve UX.
+• Try a dark/light theme toggle layout (visually only — no JS).
+• Include visualizations or summaries using pure CSS (e.g., spending charts with divs or bars).
+
+
+📌 Second Task: JavaScript Challenge: Intelligent Virtual Library System
+
+Only pure JavaScript is allowed — no libraries or UI elements.
+
+Projects using any external libraries will not be accepted. Focus on clean and logical code.
+
+Project Description
+
+Let’s simulate a Virtual Library using only pure JavaScript (no HTML, no CSS, no UI elements).
+The goal is to model a smart logic where users can borrow, return, and explore books —
+all handled through code.
+
+You will create and manage:
+
+• A list of books available for borrowing.
+• A list of users who interact with the system.
+• No input elements or buttons — everything happens through code and function calls.
+
+Core Functionality
+
+addBook(book)
+Adds a new book to the library collection. Each book should include:
+
+borrowBook(userName, bookId)
