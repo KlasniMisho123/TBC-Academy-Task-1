@@ -53,218 +53,250 @@
             <img src="/public/images/zoe_kravitz.jpg" class="profile-logo" />
         </div>
     </section>
-    <section class="dashboard-content-div">
-        <div class="dashboard-content-header-div">
-            <div class="dashboard-content-header">
-                <h3>Your Banking Dashboard</h3>
-                <p>Zoe, Welcome to <span class="brand-name">Mooney</span> </p>
-            </div>
+    <section class="main-content-div">
 
-            <div class="dashboard-content-time">
-                <div>12 M</div>
-                <div>1 M</div>
-                <div>7 D</div>
-                <div>24 H</div>
+        <section class="side-nav">
+            <ul>
+                <li class="active-link">
+                    <a href="/">
+                        <i class="fa-solid fa-gauge-high"></i>
+                         Dashboard
+                    </a>
+                </li>
+
+                <ul class="sub-links">
+                    <li><a href="#bankcard-section">Cards</a></li>
+                    <li><a href="#expenses-content">Expenses</a></li>
+                    <li><a href="#transactions-section">Transactions</a></li>
+                    <li><a href="#cards-section">Cards</a></li>
+                </ul>
+
+                <li><i class="fa-solid fa-piggy-bank"></i> Accounts</li>
+                <li><i class="fa-solid fa-arrow-right-arrow-left"></i> Transfers</li>
+                <li><i class="fa-solid fa-receipt"></i> Transactions</li>
+                <li><i class="fa-solid fa-gear"></i> Settings</li>
+            </ul>
+            <div class="profile-picture">
+                <img src="/public/images/zoe_kravitz.jpg" alt="User profile photo">
+                <div>Log Out <i class="fa-solid fa-right-from-bracket"></i> </div>
             </div>
-        </div>
-        <div class="bankcard-div">
-            <div class="bankcard-item">
-                <div class="card-header">
-                    <p> <i class="fa-solid fa-credit-card credit-card "></i> Primary Card</p>
-                    <i class="fa-solid fa-gear gear"></i>
+        </section>
+
+        <section class="dashboard-content-div">
+            <div class="dashboard-content-header-div">
+                <div class="dashboard-content-header">
+                    <h3>Your Banking Dashboard</h3>
+                    <p>Zoe, Welcome to <span class="brand-name">Mooney</span> </p>
+
                 </div>
 
-                <div class="card-body">
-                    <div class="card-img-div">
-                        <img src="/public/images/bankCard1.png" alt="card1" />
-                        
-                        <div class="card-balance">
-                        <div>Current Balance</div>
-                        <h5>1,250₾</h5>
-                    </div>
+                <div class="dashboard-content-time">
+                    <div>12 M</div>
+                    <div>1 M</div>
+                    <div>7 D</div>
+                    <div>24 H</div>
+                </div>
+            </div>
+            <section id="bankcard-section" class="bankcard-section">
+                <div class="bankcard-item">
+                    <div class="card-header">
+                        <p> <i class="fa-solid fa-credit-card credit-card "></i> Primary Card</p>
+                        <i class="fa-solid fa-gear gear"></i>
                     </div>
 
-                    <div class="card-stat">
-                        <p>Cashback</p>
+                    <div class="card-body">
+                        <div class="card-img-div">
+                            <img src="/public/images/bankCard1.png" alt="card1" />
+                            
+                            <div class="card-balance">
+                            <div>Current Balance</div>
+                            <h5>1,250₾</h5>
+                        </div>
+                        </div>
+
+                        <div class="card-stat">
+                            <p>Cashback</p>
+                            <p>Month</p>
+                            <h6>19₾ <i class="fa-solid fa-arrow-trend-up"></i> </h6>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="bankcard-item ">
+                    <div class="card-header">
+                        <p><i class="fa-solid fa-plane-departure travel-icon"></i> Travel Card</p>
+                        <i class="fa-solid fa-gear gear"></i>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="card-img-div">
+                            <img src="/public/images/bankCard3.png" alt="card3" />
+                            <div class="card-balance">
+                            <div>Current Balance</div>
+                            <h5>980₾</h5>
+                        </div>
+                        </div>
+
+                        <div class="card-stat positive-stat">
+                        <p>Miles Earned</p>
                         <p>Month</p>
-                        <h6>19₾ <i class="fa-solid fa-arrow-trend-up"></i> </h6>
-                    </div>
-
-                </div>
-            </div>
-            <div class="bankcard-item ">
-                <div class="card-header">
-                    <p><i class="fa-solid fa-plane-departure travel-icon"></i> Travel Card</p>
-                    <i class="fa-solid fa-gear gear"></i>
-                </div>
-
-                <div class="card-body">
-                    <div class="card-img-div">
-                        <img src="/public/images/bankCard3.png" alt="card3" />
-                        <div class="card-balance">
-                        <div>Current Balance</div>
-                        <h5>980₾</h5>
-                    </div>
-                    </div>
-
-                    <div class="card-stat positive-stat">
-                    <p>Miles Earned</p>
-                    <p>Month</p>
-                    <h6>12,500 <i class="fa-solid fa-arrow-trend-up"></i></h6>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="bankcard-item">
-                <div class="card-header">
-                    <p><i class="fa-solid fa-credit-card credit-card"></i> Secondary Card</p>
-                    <i class="fa-solid fa-gear gear"></i>
-                </div>
-
-                <div class="card-body">
-                    <div class="card-img-div">
-                        <img src="/public/images/bankCard2.png" alt="card2" />
-                        
-                        <div class="card-balance">
-                        <div>Current Balance</div>
-                        <h5>650₾</h5>
-                    </div>
-                    </div>
-
-                    <div class="card-stat negative-stat">
-                    <p>Overdue Payments</p>
-                    <p>Month</p>
-                    <h6>-32₾ <i class="fa-solid fa-arrow-trend-down"></i></h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="expanses-content">
-            <div class="recent-transactions-div" >
-                <div class="recent-transactions-header ">
-                    <h3> <i class="fa-solid fa-circle-dollar-to-slot fa-bounce" style="color: #FFD43B;"></i> Recent Transactions </h3>  
-                    <i class="fa-solid fa-gear gear"></i>
-                </div>
-
-                <div class="recent-transactions-content">
-                    <div class="recent-transaction-item">
-                        <img src="/public/images/setanta.jpg" class="company-logo"/>
-                        <div class="recent-transaction-desc-div">
-                            <h5 class=""> Setanta Sports</h5>
-                            <p>Monthly Setanta Subscription</p>
-                        </div>
-                        <div class="recent-transaction-payment-info">
-                            <h5>-13₾ </h5>
-                            <p> Jul 10</p>
-                        </div>
-                    </div>
-
-                    <div class="recent-transaction-item">
-                        <img src="/public/images/netflix.png" class="company-logo"/>
-                        <div class="recent-transaction-desc-div">
-                            <h5 class=""> Netflix </span></h5>
-                            <p>Monthly Netflix Subscription</p>
-                        </div>
-                        <div class="recent-transaction-payment-info">
-                            <h5>-29₾ </h5>
-                            <p> Jul 10</p>
-                        </div>
-                    </div>
-
-                    <div class="recent-transaction-item">
-                        <img src="/public/images/steam.png" class="company-logo"/>
-                        <div class="recent-transaction-desc-div">
-                            <h5 class=""> Steam  </span></h5>
-                            <p>Game: Baldur's Gate 3</p>
-                        </div>
-                        <div class="recent-transaction-payment-info">
-                            <h5>-60₾ </h5>
-                            <p> Jul 9</p>
-                        </div>
-                    </div>
-                
-                    <div class="recent-transaction-item">
-                        <img src="/public/images/spotify.png" class="company-logo"/>
-                        <div class="recent-transaction-desc-div">
-                            <h5 class="sptoify-title"> Spotify </h5>
-                            <p>Monthly Spotify Subscription</p>
-                        </div>
-                        <div class="recent-transaction-payment-info">
-                            <h5>-17₾ </h5>
-                            <p> Jul 8</p>
+                        <h6>12,500 <i class="fa-solid fa-arrow-trend-up"></i></h6>
                         </div>
                     </div>
                 </div>
 
-                <button> See All <i class="fa-solid fa-arrow-right fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i> </button>
-            </div>
-            <div class="monthly-expanses-div ">
-               <div class="expanses-header ">
-                   <h4> <i class="fa-solid fa-credit-card credit-card "></i> Monthly Expanses </h4>
-                    <i class="fa-solid fa-gear gear"></i>
-               </div>
-               <div class="expanses-info-div">
-                    <div class="expanses-info-item">
-                        <i class="fa-solid fa-arrow-right fa-rotate-by income-info-icon"></i> 
-                        <div>
-                             <p>Income</p>
-                             <h5><span> ₾ </span> 1578</h5>
-                        </div>
+
+                <div class="bankcard-item">
+                    <div class="card-header">
+                        <p><i class="fa-solid fa-credit-card credit-card"></i> Secondary Card</p>
+                        <i class="fa-solid fa-gear gear"></i>
                     </div>
 
-                    <div class="expanses-info-item">
-                        <i class="fa-solid fa-arrow-right fa-rotate-by expanse-info-icon "></i> 
-                        <div>
-                             <p>Expanse</p>
-                             <h5><span> ₾ </span> 1350.78</h5>
+                    <div class="card-body">
+                        <div class="card-img-div">
+                            <img src="/public/images/bankCard2.png" alt="card2" />
+                            
+                            <div class="card-balance">
+                            <div>Current Balance</div>
+                            <h5>650₾</h5>
+                        </div>
                         </div>
 
-                        <div class="progress-wrapper">
-                            <div class="circle-progress" style="--percent: 86;">
-                                <span>86%</span>
+                        <div class="card-stat negative-stat">
+                        <p>Overdue Payments</p>
+                        <p>Month</p>
+                        <h6>-32₾ <i class="fa-solid fa-arrow-trend-down"></i></h6>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="expenses-content" id="expenses-content" >
+                <div class="recent-transactions-div" >
+                    <div class="recent-transactions-header ">
+                        <h3> <i class="fa-solid fa-circle-dollar-to-slot fa-bounce" style="color: #FFD43B;"></i> Recent Transactions </h3>  
+                        <i class="fa-solid fa-gear gear"></i>
+                    </div>
+
+                    <div class="recent-transactions-content">
+                        <div class="recent-transaction-item">
+                            <img src="/public/images/setanta.jpg" class="company-logo"/>
+                            <div class="recent-transaction-desc-div">
+                                <h5 class=""> Setanta Sports</h5>
+                                <p>Monthly Setanta Subscription</p>
+                            </div>
+                            <div class="recent-transaction-payment-info">
+                                <h5>-13₾ </h5>
+                                <p> Jul 10</p>
                             </div>
                         </div>
-                        <p class="progress-desc">86% of monthly income</p>
 
+                        <div class="recent-transaction-item">
+                            <img src="/public/images/netflix.png" class="company-logo"/>
+                            <div class="recent-transaction-desc-div">
+                                <h5 class=""> Netflix </span></h5>
+                                <p>Monthly Netflix Subscription</p>
+                            </div>
+                            <div class="recent-transaction-payment-info">
+                                <h5>-29₾ </h5>
+                                <p> Jul 10</p>
+                            </div>
+                        </div>
+
+                        <div class="recent-transaction-item">
+                            <img src="/public/images/steam.png" class="company-logo"/>
+                            <div class="recent-transaction-desc-div">
+                                <h5 class=""> Steam  </span></h5>
+                                <p>Game: Baldur's Gate 3</p>
+                            </div>
+                            <div class="recent-transaction-payment-info">
+                                <h5>-60₾ </h5>
+                                <p> Jul 9</p>
+                            </div>
+                        </div>
+                    
+                        <div class="recent-transaction-item">
+                            <img src="/public/images/spotify.png" class="company-logo"/>
+                            <div class="recent-transaction-desc-div">
+                                <h5 class="sptoify-title"> Spotify </h5>
+                                <p>Monthly Spotify Subscription</p>
+                            </div>
+                            <div class="recent-transaction-payment-info">
+                                <h5>-17₾ </h5>
+                                <p> Jul 8</p>
+                            </div>
+                        </div>
                     </div>
-               </div>
-               
-            <div class="finance-summary-container">
-                <div class="finance-section">
-                    <p>Jul</p>
-                    <h4>Income</h4>
-                    <div class="pie-chart income-chart">
-                    <div class="center-label">₾1578</div> 
+
+                    <button> See All <i class="fa-solid fa-arrow-right fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i> </button>
+                </div>
+                <div class="monthly-expenses-div ">
+                <div class="expenses-header ">
+                    <h4> <i class="fa-solid fa-credit-card credit-card "></i> Monthly expenses </h4>
+                        <i class="fa-solid fa-gear gear"></i>
+                </div>
+                <div class="expenses-info-div">
+                        <div class="expenses-info-item">
+                            <i class="fa-solid fa-arrow-right fa-rotate-by income-info-icon"></i> 
+                            <div>
+                                <p>Income</p>
+                                <h5><span> ₾ </span> 1578</h5>
+                            </div>
+                        </div>
+
+                        <div class="expenses-info-item">
+                            <i class="fa-solid fa-arrow-right fa-rotate-by expense-info-icon "></i> 
+                            <div>
+                                <p>expense</p>
+                                <h5><span> ₾ </span> 1350.78</h5>
+                            </div>
+
+                            <div class="progress-wrapper">
+                                <div class="circle-progress" style="--percent: 86;">
+                                    <span>86%</span>
+                                </div>
+                            </div>
+                            <p class="progress-desc">86% of monthly income</p>
+
+                        </div>
+                </div>
+                
+                <div class="finance-summary-container">
+                    <div class="finance-section">
+                        <p>Jul</p>
+                        <h4>Income</h4>
+                        <div class="pie-chart income-chart">
+                        <div class="center-label">₾1578</div> 
+                        </div>
+                        <ul class="finance-breakdown">
+                        <li><span class="dot job"></span> ₾1000 - Job</li>
+                        <li><span class="dot transfer"></span> ₾350 - Bank Transfers</li>
+                        <li><span class="dot freelance"></span> ₾228 - Freelance</li>
+                        </ul>
                     </div>
-                    <ul class="finance-breakdown">
-                    <li><span class="dot job"></span> ₾1000 - Job</li>
-                    <li><span class="dot transfer"></span> ₾350 - Bank Transfers</li>
-                    <li><span class="dot freelance"></span> ₾228 - Freelance</li>
-                    </ul>
+
+                    <div class="finance-section">
+                        <p>Jul</p>
+                        <h4>Expenses</h4>
+                        <div class="pie-chart expense-chart">
+                            <div class="center-label">₾1350</div>
+                        </div>
+                        <ul class="finance-breakdown">
+                            <li><span class="dot subs"></span> ₾250 - Subscriptions</li>
+                            <li><span class="dot shopping"></span> ₾320 - Shopping</li>
+                            <li><span class="dot food"></span> ₾400 - Food & Coffee</li>
+                            <li><span class="dot withdraw"></span> ₾380 - Withdrawals</li>
+                        </ul>
+                    </div>
+
                 </div>
 
-                <div class="finance-section">
-                    <p>Jul</p>
-                    <h4>Expenses</h4>
-                    <div class="pie-chart expense-chart">
-                        <div class="center-label">₾1350</div>
+
                     </div>
-                    <ul class="finance-breakdown">
-                        <li><span class="dot subs"></span> ₾250 - Subscriptions</li>
-                        <li><span class="dot shopping"></span> ₾320 - Shopping</li>
-                        <li><span class="dot food"></span> ₾400 - Food & Coffee</li>
-                        <li><span class="dot withdraw"></span> ₾380 - Withdrawals</li>
-                    </ul>
+
                 </div>
-
             </div>
-
-
-                 </div>
-
-            </div>
-        </div>
+        </section>
+        
     </section>
 </body>
 </html>
