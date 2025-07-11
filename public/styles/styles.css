@@ -487,15 +487,30 @@ body {
 .expanses-info-div{
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 6px;
 }
 
-.expanses-info-element{
+.expanses-info-item {
   flex: 1;
   display: flex;
-  justify-content: center;
-  gap: 6px;
+  padding: 12px 8px;
+  background-color: var(--color-white);
+  color: var(--color-text-dark);
+  box-shadow: 0 0px 1px rgba(91, 33, 182, 0.2);
+  border-radius: 8px;
+  margin-bottom: 5px;
 }
+
+.expanses-info-item > i {
+  border-radius: 100%;
+  color: var(--color-primary);
+}
+
+.expanses-visuals-div{
+  flex: 5;
+  background-color: #eab2b2;
+}
+
 
 /* Exspanses Content End */
