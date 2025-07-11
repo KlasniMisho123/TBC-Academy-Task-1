@@ -350,7 +350,6 @@ body {
 }
 
 .recent-transactions-div {
-  background-color: #10B981;
   height: auto;
   border-radius: 16px;
   background: var(--color-bg-light);
@@ -400,7 +399,7 @@ body {
 
 .recent-transactions-div > button:hover > i {
   transition: all 0.5s ease;
-  transform: translate(20px, -150%);
+  transform: translate(20px, -200%);
 }
 
 .recent-transaction-item {
@@ -416,7 +415,6 @@ body {
   width: 90%;
 }
 
-/* Logo */
 .company-logo {
   width: 40px;
   height: 40px;
@@ -426,7 +424,6 @@ body {
   border-radius: 100%;
 }
 
-/* Description */
 .recent-transaction-desc-div {
   flex: 1;
   display: flex;
@@ -441,28 +438,12 @@ body {
   margin: 0;
 }
 
-.setanta-title {
-  color: yellow;
-  background: var(--color-text-dark);
-  font-weight: bold;
-  font-size: 0.95rem;
-  width: max-content;
-  padding: 3px 6px;
-  border-radius: 4px;
-}
-
-.setanta-title > span {
-  font-weight: 100;
-}
-
 
 .recent-transaction-desc-div p {
   font-size: 0.875rem;
   color: var(--color-text-muted);
   margin: 0;
 }
-
-/* Payment Info */
 .recent-transaction-payment-info {
   text-align: right;
 }
@@ -481,9 +462,40 @@ body {
 }
 
 
-.montly-expanses-div {
-  background-color: #EF4444;
+/* Expanses Element  */
+
+.monthly-expanses-div {
+  height: auto;
+  border-radius: 16px;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  padding: 1rem;
+  box-shadow: 0 4px 4px rgba(91, 33, 182, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
   flex: 2;
 }
 
-/* Expanses Element Ends */
+.expanses-header {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.expanses-info-div{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.expanses-info-element{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* Exspanses Content End */
