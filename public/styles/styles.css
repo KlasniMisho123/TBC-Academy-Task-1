@@ -1091,9 +1091,7 @@ body {
   font-weight: bold;
 }
 
-/*  ++ */
-
-/* Mooney points */
+/* Mooney points  section */
 .moony-horizontal-card {
   display: flex;
   align-items: center;
@@ -1107,6 +1105,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   user-select: none;
   transition: box-shadow 0.3s ease;
+  margin-top: 50px;
 }
 
 .moony-horizontal-card:hover {
