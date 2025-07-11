@@ -198,6 +198,25 @@
                     </div>
                 </div>
             </section>
+
+           <div class="moony-horizontal-card">
+                <div class="moon-icon">
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+                <div class="moony-info">
+                    <div class="points-label">MoonyPoints</div>
+                    <div class="points-number">220</div>
+                    <p class="moony-description">Reward points you earn by using your cards.</p>
+                </div>
+                <div class="moony-recent">
+                    <p><i class="fa-solid fa-arrow-up"></i> +15 points earned recently</p>
+                </div>
+                <div class="moony-cta">
+                    <p>Earn more by shopping and paying bills on time!</p>
+                </div>
+            </div>
+
+
             <div class="expenses-content" id="expenses-content" >
                 <div class="recent-transactions-div" >
                     <div class="recent-transactions-header ">
@@ -323,41 +342,94 @@
 
                 </div>
             </div>
-            <section class="dashboard-section" id="insights-section">
-                <h4>Spending Insights</h4>
-                <div class="insights-grid">
-                    <div class="insight-card">
-                    <h5>Biggest Expense</h5>
-                    <p>Shopping — ₾580</p>
+            <div class="dashboard-lower">
+                <!-- Spending Alerts -->
+                <div class="spending-alerts">
+                    <h4>Spending Alerts</h4>
+
+                    <div class="alert-item warning">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    You've used 92% of your Shopping budget
                     </div>
-                    <div class="insight-card">
-                    <h5>Monthly Change</h5>
-                    <p><span class="positive">+12%</span> from last month</p>
+
+                    <div class="alert-item info">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    Try limiting daily coffee spending to ₾5
                     </div>
-                    <div class="insight-card">
-                    <h5>Most Used Card</h5>
-                    <p>Primary Card — ₾950 used</p>
+
+                    <div class="alert-item goal">
+                    <i class="fa-solid fa-bullseye"></i>
+                    You're 75% towards your monthly savings goal!
                     </div>
-                    <div class="insight-card">
-                    <h5>Suggestion</h5>
-                    <p>Reduce subscription costs by 10%</p>
+
+                    <div class="alert-item payment">
+                    <i class="fa-solid fa-calendar-day"></i>
+                    Upcoming: Youtube Premium ₾17.49 due in 3 days
                     </div>
                 </div>
+
+                <!-- Insights -->
+                <section class="dashboard-section" id="insights-section">
+                    <h4>Spending Insights</h4>
+                    <div class="insights-grid">
+                        
+                        <div class="insight-card">
+                        <i class="fa-solid fa-bag-shopping icon shopping-icon"></i>
+                        <div class="insight-text">
+                            <h5>Biggest Expense</h5>
+                            <p><strong>₾580</strong> on Shopping</p>
+                        </div>
+                        </div>
+
+                        <div class="insight-card">
+                        <i class="fa-solid fa-chart-line icon change-icon"></i>
+                        <div class="insight-text">
+                            <h5>Monthly Change</h5>
+                            <p><span class="negative">+12%</span> from last month</p>
+                        </div>
+                        </div>
+
+                        <div class="insight-card">
+                        <i class="fa-solid fa-credit-card icon card-icon"></i>
+                        <div class="insight-text">
+                            <h5>Most Used Card</h5>
+                            <p>Primary Card — <strong>₾950</strong> used</p>
+                        </div>
+                        </div>
+
+                        <div class="insight-card">
+                        <i class="fa-solid fa-lightbulb icon suggest-icon"></i>
+                        <div class="insight-text">
+                            <h5>Suggestion</h5>
+                            <p>Reduce subscription costs by <strong>10%</strong></p>
+                        </div>
+                        </div>
+
+                        <div class="insight-card">
+                        <i class="fa-solid fa-calendar-day icon daily-icon"></i>
+                        <div class="insight-text">
+                            <h5>Daily Average</h5>
+                            <p><strong>₾42</strong> per day</p>
+                        </div>
+                        </div>
+
+                        <div class="insight-card">
+                        <i class="fa-solid fa-clock icon day-icon"></i>
+                        <div class="insight-text">
+                            <h5>Most Active Day</h5>
+                            <p>Saturday — <strong>₾210</strong></p>
+                        </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </div>
+
             </section>
 
             <!--  -->
-            <div class="spending-alerts">
-                <h4>Spending Alerts</h4>
-                <div class="alert-item warning">
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    You've used 92% of your Shopping budget
-                </div>
-                <div class="alert-item info">
-                    <i class="fa-solid fa-lightbulb"></i>
-                    Try limiting daily coffee spending to ₾5
-                </div>
-            </div>
-
+            
         </section>
 
     </section>

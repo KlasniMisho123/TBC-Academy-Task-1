@@ -931,8 +931,240 @@ body {
   color: var(--color-success);
 }
 
+.negative {
+  color: var(--color-alert);
+}
+
 /* insights-section End */
 
 /* ++ */
+.dashboard-lower {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+/* Spending Alerts */
+.spending-alerts {
+  background-color: var(--color-white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px -8px #5B21B6;
+  max-width: 400px;
+  width: 100%;
+  flex: 1 1 350px;
+}
+
+.spending-alerts h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--color-text-dark);
+}
+
+.alert-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Alert Types */
+.alert-item.warning {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+.alert-item.warning i {
+  color: #f59e0b;
+}
+
+.alert-item.info {
+  background-color: var(--color-light-blue);
+  color: var(--color-secondary-theme);
+}
+.alert-item.info i {
+  color: var(--color-secondary-theme);
+}
+
+.alert-item.goal {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+.alert-item.goal i {
+  color: #0ea5e9;
+}
+
+.alert-item.payment {
+  background-color: #ede9fe;
+  color: #5b21b6;
+}
+.alert-item.payment i {
+  color: #8b5cf6;
+}
+
+/* Insights Section */
+.dashboard-section {
+  background-color: var(--color-white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px -8px #5B21B6;
+  flex: 2 1 500px;
+}
+
+.dashboard-section h4 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: var(--color-text-dark);
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.insight-card {
+  background-color: var(--color-bg-light);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease;
+}
+
+.insight-card:hover {
+  transform: translateY(-4px);
+}
+
+.insight-card .icon {
+  font-size: 1.5rem;
+  padding: 0.6rem;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Custom icon colors */
+.shopping-icon {
+  color: #f97316;
+}
+.change-icon {
+  color: #ef4444;
+}
+.card-icon {
+  color: var(--color-secondary-theme);
+}
+.suggest-icon {
+  color: #eaf517;
+}
+.daily-icon {
+  color: #0ea5e9;
+}
+.day-icon {
+  color: #6366f1;
+}
+
+.insight-text h5 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--color-text-dark);
+}
+
+.insight-text p {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--color-text-muted);
+}
+
+.insight-text .negative {
+  color: var(--color-alert);
+  font-weight: bold;
+}
 
 /*  ++ */
+
+/* Mooney points */
+.moony-horizontal-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--color-bg-light);
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  max-width: 600px; /* fixed typo */
+  color: var(--color-text-dark);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 50px;
+  transition: box-shadow 0.3s ease;
+}
+
+.moony-horizontal-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.moon-icon {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.moony-info {
+  flex-grow: 1;
+}
+
+.points-number {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.2rem;
+  border-bottom: 3px solid var(--color-secondary-theme);
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+.points-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--color-text-muted);
+}
+
+.moony-description {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.moony-recent {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-success);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.moony-recent i {
+  color: var(--color-success);
+  font-size: 1.1rem;
+}
+
+.moony-cta {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-secondary-theme);
+  white-space: nowrap;
+  user-select: none;
+}
