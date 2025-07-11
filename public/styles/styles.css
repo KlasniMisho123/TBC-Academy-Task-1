@@ -504,7 +504,7 @@ body {
   border-radius: 8px;
   margin-bottom: 5px;
   align-items: start;
-  gap: 10%;
+  gap: 6%;
 }
 
 .income-info-icon {
@@ -541,8 +541,9 @@ body {
 
 .expanses-info-item > div > h5 {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
+  white-space: nowrap;
   color: var(--color-text-dark);
 }
 
@@ -560,8 +561,8 @@ body {
 
 .circle-progress {
   --percent: 0;
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   background: conic-gradient(
     var(--color-secondary-theme) calc(var(--percent) * 1%),
