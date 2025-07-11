@@ -10,22 +10,37 @@ body {
 }
 
 :root {
-  --color-primary: #5B21B6;
-  --color-secondary-theme: #2563EB;
-  --color-light-blue: #DBEAFE;
-  --color-secondary: #8B5CF6;
-  --color-light-purple: #EDE9FE;
-  --color-text-dark: #1F2937;
-  --color-text-muted: #6B7280;
-  --color-bg-light: #F3F4F6;
-  --color-success: #10B981;
-  --color-alert: #EF4444;
-  --color-white: #FFFFFF;
+  /* Primary Colors */
+  --color-primary: #5B21B6; /* Purple (from second set, more recent) */
   --color-primary-light: #a78bfa;     /* lighter purple */
   --color-primary-lighter: #ddd6fe;   /* even lighter purple */
 
+  /* Secondary Colors */
+  --color-secondary: #8B5CF6; /* Purple (from second set) */
+  --color-secondary-theme: #2563EB; /* Blue */
   --color-secondary-light: #93c5fd;   /* lighter blue */
   --color-secondary-lighter: #bfdbfe; /* even lighter blue */
+
+  /* Alert/Status Colors */
+  --color-alert: #EF4444; /* Red (from second set) */
+  --color-success: #10B981; /* Green */
+  
+  /* Text Colors */
+  --color-text-light: #f0f0f0; /* from first set */
+  --color-text-dark: #1F2937;
+  --color-text-muted: #6B7280;
+  
+  /* Background Colors */
+  --color-bg-light: #F3F4F6;
+  --color-bg-overlay: rgba(0, 0, 0, 0.75); /* from first set */
+  --color-white: #FFFFFF;
+  --color-light-blue: #DBEAFE;
+  --color-light-purple: #EDE9FE;
+  
+  /* Special Purpose Colors */
+  --color-vacation: #3b82f6; /* Blue-ish (from first set) */
+  --color-car: #f59e0b; /* Amber (from first set) */
+  --color-home: #10b981; /* Green (from first set) */
 }
 
 .header {
@@ -1218,12 +1233,22 @@ body {
 .goal-tracker-section {
   padding: 2rem 1rem;
   max-width: 90%;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .section-title {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   color: var(--color-text-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.goal-icon {
+  color: var(--color-alert);
+  font-size: 36px;
 }
 
 .goal-grid {
@@ -1233,101 +1258,171 @@ body {
 }
 
 .goal-card {
+  position: relative;
   background-size: cover;
   background-position: center;
   border-radius: 16px;
-  color: white;
-  position: relative;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-  overflow: hidden;
-  min-height: 220px;
+  color: var(--color-text-light);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.35);
+  min-height: 240px;
   display: flex;
   align-items: flex-end;
   padding: 1.5rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
 }
 
 .goal-card:hover {
-  transform: scale(1.03);
+  transform: scale(1.04);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.5);
 }
 
+/* Gradient black overlay anchored to bottom */
+.goal-card::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%; height: 60%;
+  background: linear-gradient(to top, var(--color-bg-overlay), transparent);
+  border-radius: 16px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Content sits above overlay */
 .goal-content {
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 12px;
-  padding: 1rem;
+  position: relative;
+  z-index: 1;
   width: 100%;
-  height: 300px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem 1.25rem;
 }
 
 .goal-title {
-  font-size: 1.3rem;
-  margin-bottom: 0.25rem;
+  font-size: 1.4rem;
   font-weight: 700;
+  margin-bottom: 0.3rem;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
 }
 
 .goal-desc {
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
-  opacity: 0.8;
+  opacity: 0.85;
+  line-height: 1.3;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.7);
 }
 
+/* Financial bar */
 .financial-bar {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .progress-bar {
-  background: rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.15);
   border-radius: 12px;
   overflow: hidden;
-  height: 12px;
+  height: 14px;
   width: 100%;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
 }
 
 .progress {
-  background: var(--color-primary);
   height: 100%;
   width: 0;
-  transition: width 0.5s ease;
+  transition: width 0.6s ease;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  border-radius: 12px 0 0 12px;
 }
 
+/* Individual theme colors for progress */
+.goal-vacation .progress {
+  background: linear-gradient(90deg, #3b82f6, #2563eb); /* blue */
+  box-shadow: 0 0 8px rgba(59,130,246,0.6);
+}
+
+.goal-car .progress {
+  background: linear-gradient(90deg, #fbbf24, #f59e0b); /* amber */
+  box-shadow: 0 0 8px rgba(251,191,36,0.6);
+}
+
+.goal-home .progress {
+  background: linear-gradient(90deg, #34d399, #10b981); /* green */
+  box-shadow: 0 0 8px rgba(52,211,153,0.6);
+}
+
+/* Financial info text */
 .financial-info {
   display: flex;
   justify-content: space-between;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
   opacity: 0.9;
+  letter-spacing: 0.02em;
 }
 
+/* Buttons container */
 .goal-buttons {
   display: flex;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
-.btn-pay, .btn-withdraw {
+/* Base button styles */
+.btn-pay,
+.btn-withdraw {
   flex: 1;
-  padding: 0.5rem 0;
+  padding: 0.55rem 0;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  user-select: none;
 }
 
+/* Pay In Button */
 .btn-pay {
-  background-color: var(--color-success);
+  background-color: var(--color-primary);
   color: white;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.6);
 }
 
 .btn-pay:hover {
-  background-color: #0f8e56;
+  background-color: #1d4ed8;
+  box-shadow: 0 6px 14px rgba(29, 78, 216, 0.8);
 }
 
+/* Withdraw Button */
 .btn-withdraw {
   background-color: var(--color-alert);
   color: white;
+  box-shadow: 0 4px 10px rgba(249, 115, 22, 0.6);
 }
 
 .btn-withdraw:hover {
-  background-color: #cc3737;
+  background-color: #c2410c;
+  box-shadow: 0 6px 14px rgba(194, 65, 12, 0.8);
+}
+
+/* Icons inside buttons */
+.btn-pay::before {
+  content: "\f055"; /* FontAwesome plus-circle */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.btn-withdraw::before {
+  content: "\f056"; /* FontAwesome minus-circle */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
 }
