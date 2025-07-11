@@ -1092,6 +1092,12 @@ body {
 }
 
 /* Mooney points  section */
+
+.goal-icon {
+  color: var(--color-alert);
+  font-size: 36px;
+};
+
 .moony-horizontal-card {
   display: flex;
   align-items: center;
@@ -1211,8 +1217,7 @@ body {
 
 .goal-tracker-section {
   padding: 2rem 1rem;
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 90%;
 }
 
 .section-title {
@@ -1251,6 +1256,7 @@ body {
   border-radius: 12px;
   padding: 1rem;
   width: 100%;
+  height: 300px;
 }
 
 .goal-title {
