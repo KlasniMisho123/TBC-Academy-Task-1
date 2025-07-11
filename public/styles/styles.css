@@ -1107,12 +1107,6 @@ body {
 }
 
 /* Mooney points  section */
-
-.goal-icon {
-  color: var(--color-alert);
-  font-size: 36px;
-};
-
 .moony-horizontal-card {
   display: flex;
   align-items: center;
@@ -1227,7 +1221,6 @@ body {
   font-size: 0.9rem;
   margin-top: auto;
 }
-
 /* Goal Tracker */
 
 .goal-tracker-section {
