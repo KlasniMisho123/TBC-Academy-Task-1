@@ -497,18 +497,19 @@ body {
 .expanses-info-item {
   flex: 1;
   display: flex;
-  padding: 12px 8px;
+  padding: 1rem;
   background-color: var(--color-white);
   color: var(--color-text-dark);
   box-shadow: 0 0px 1px rgba(91, 33, 182, 0.2);
   border-radius: 8px;
   margin-bottom: 5px;
   align-items: start;
+  gap: 12px;
 }
 
 .income-info-icon {
   border-radius: 100%;
-  padding: 0.5rem;
+  padding: 1rem;
   background-color: var(--color-light-purple);
   color: var(--color-primary);
   height: max-content;
@@ -517,12 +518,41 @@ body {
 
 .expanse-info-icon {
   border-radius: 100%;
-  padding: 0.5rem;
+  padding: 1rem;
   background-color: var(--color-light-blue);
   color: var(--color-secondary-theme);
   height: max-content;
   rotate: -45deg;
 }
+
+.expanses-info-item > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 0.25rem;
+}
+
+.expanses-info-item > div > p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.5px;
+}
+
+.expanses-info-item > div > h5 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+.expanses-info-item > div > h5 span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-right: 2px;
+}
+
 
 .expanses-visuals-div{
   flex: 5;
