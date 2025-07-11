@@ -18,6 +18,11 @@ body {
   --color-success: #10B981;
   --color-alert: #EF4444;
   --color-white: #FFFFFF;
+  --color-primary-light: #a78bfa;     /* lighter purple */
+  --color-primary-lighter: #ddd6fe;   /* even lighter purple */
+
+  --color-secondary-light: #93c5fd;   /* lighter blue */
+  --color-secondary-lighter: #bfdbfe; /* even lighter blue */
 }
 
 .header {
@@ -609,7 +614,6 @@ body {
 }
 
 /* --- */
-
 .finance-summary-container {
   display: flex;
   justify-content: space-around;
@@ -618,16 +622,18 @@ body {
   margin: 2rem 0;
 }
 
+/* Section styles */
 .finance-section {
   flex: 1 1 320px;
   max-width: 400px;
   background: var(--color-white);
   padding: 1rem;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   text-align: center;
 }
 
+/* Section header */
 .finance-section h4 {
   margin-bottom: 1rem;
   color: var(--color-text-dark);
@@ -658,32 +664,38 @@ body {
   transform: translate(-50%, -50%);
 }
 
+/* Center label inside pie */
 .center-label {
   position: absolute;
   font-weight: 600;
   font-size: 1rem;
   color: var(--color-text-dark);
   z-index: 1;
-}
-
-.expense-chart {
-  background: conic-gradient(
-    var(--color-secondary) 0 60%,
-    var(--color-secondary-light) 60% 100%
-  );
-}
-
-.center-label {
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-weight: bold;
-  color: var(--color-text-dark);
-  font-size: 1rem;
 }
 
-/* Breakdown list */
+/* Income Pie Chart */
+.income-chart {
+  background: conic-gradient(
+    var(--color-primary) 0% 63.4%,        /* Job */
+    var(--color-primary-light) 63.4% 85.6%, /* Bank Transfers */
+    var(--color-primary-lighter) 85.6% 100% /* Freelance */
+  );
+}
+
+/* Expense Pie Chart */
+.expense-chart {
+  background: conic-gradient(
+    var(--color-secondary-theme) 0% 18.5%,      /* Subscriptions */
+    var(--color-secondary-light) 18.5% 42.2%,   /* Shopping */
+    var(--color-secondary-lighter) 42.2% 71.8%, /* Food & Coffee */
+    #a5b4fc 71.8% 100%                           /* Withdrawals */
+  );
+}
+
+/* Finance breakdown list */
 .finance-breakdown {
   list-style: none;
   padding: 0;
@@ -697,9 +709,10 @@ body {
   gap: 0.5rem;
   margin-bottom: 0.5rem;
   font-size: 0.85rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-dark);
 }
 
+/* Colored dots for breakdown */
 .dot {
   width: 12px;
   height: 12px;
@@ -707,25 +720,32 @@ body {
   display: inline-block;
 }
 
-
 .dot.job {
   background: var(--color-primary);
 }
+
 .dot.transfer {
-  background: #a78bfa;
+  background: var(--color-primary-light);
 }
+
 .dot.freelance {
-  background: #ddd6fe;
+  background: var(--color-primary-lighter);
 }
 
 .dot.subs {
   background: var(--color-secondary-theme);
 }
+
 .dot.shopping {
-  background: #93c5fd;
+  background: var(--color-secondary-light);
 }
+
 .dot.food {
-  background: #bfdbfe;
+  background: var(--color-secondary-lighter);
+}
+
+.dot.withdraw {
+  background: #a5b4fc; 
 }
 
 
