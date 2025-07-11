@@ -8,7 +8,10 @@ body {
 
 :root {
   --color-primary: #5B21B6;
+  --color-secondary-theme: #2563EB;
+  --color-light-blue: #DBEAFE;
   --color-secondary: #8B5CF6;
+  --color-light-purple: #EDE9FE;
   --color-text-dark: #1F2937;
   --color-text-muted: #6B7280;
   --color-bg-light: #F3F4F6;
@@ -500,11 +503,25 @@ body {
   box-shadow: 0 0px 1px rgba(91, 33, 182, 0.2);
   border-radius: 8px;
   margin-bottom: 5px;
+  align-items: start;
 }
 
-.expanses-info-item > i {
+.income-info-icon {
   border-radius: 100%;
+  padding: 0.5rem;
+  background-color: var(--color-light-purple);
   color: var(--color-primary);
+  height: max-content;
+  rotate: 135deg;
+}
+
+.expanse-info-icon {
+  border-radius: 100%;
+  padding: 0.5rem;
+  background-color: var(--color-light-blue);
+  color: var(--color-secondary-theme);
+  height: max-content;
+  rotate: -45deg;
 }
 
 .expanses-visuals-div{
