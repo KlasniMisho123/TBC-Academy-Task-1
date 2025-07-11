@@ -608,5 +608,125 @@ body {
   max-width: 100%;
 }
 
+/* --- */
+
+.finance-summary-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.finance-section {
+  flex: 1 1 320px;
+  max-width: 400px;
+  background: var(--color-white);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.finance-section h4 {
+  margin-bottom: 1rem;
+  color: var(--color-text-dark);
+  font-size: 1.25rem;
+}
+
+/* Pie Chart Base */
+.pie-chart {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pie-chart::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-label {
+  position: absolute;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-text-dark);
+  z-index: 1;
+}
+
+.expense-chart {
+  background: conic-gradient(
+    var(--color-secondary) 0 60%,
+    var(--color-secondary-light) 60% 100%
+  );
+}
+
+.center-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: var(--color-text-dark);
+  font-size: 1rem;
+}
+
+/* Breakdown list */
+.finance-breakdown {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.finance-breakdown li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+.dot.job {
+  background: var(--color-primary);
+}
+.dot.transfer {
+  background: #a78bfa;
+}
+.dot.freelance {
+  background: #ddd6fe;
+}
+
+.dot.subs {
+  background: var(--color-secondary-theme);
+}
+.dot.shopping {
+  background: #93c5fd;
+}
+.dot.food {
+  background: #bfdbfe;
+}
+
 
 /* Exspanses Content End */
