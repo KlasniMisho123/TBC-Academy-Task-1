@@ -397,6 +397,7 @@ body {
   border-radius: 8px;
   margin: 10px;
   cursor: pointer;
+  max-height: 50px;
 }
 
 .recent-transactions-div > button:hover {
@@ -407,7 +408,7 @@ body {
 
 .recent-transactions-div > button:hover > i {
   transition: all 0.5s ease;
-  transform: translate(20px, -200%);
+  transform: translate(20px, -300%);
 }
 
 .recent-transaction-item {
@@ -624,6 +625,7 @@ body {
 
 /* Section styles */
 .finance-section {
+  position: relative;
   flex: 1 1 320px;
   max-width: 400px;
   background: var(--color-white);
@@ -631,6 +633,15 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   text-align: center;
+}
+
+.finance-section > p {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin: 0;
 }
 
 /* Section header */
