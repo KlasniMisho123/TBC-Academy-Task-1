@@ -1362,7 +1362,7 @@ body {
   background-size: cover;
   background-position: center;
   border-radius: 16px;
-  color: var(--color-text-light);
+  color: var(--color-primary-light);
   box-shadow: 0 8px 16px rgba(0,0,0,0.35);
   min-height: 240px;
   display: flex;
@@ -1530,7 +1530,7 @@ body {
 /* Add New Goal Card Styling */
 
 .goal-add-new {
-  background: var(--color-primary-lighter);
+  background: var(--color-primary-light);
   color: var(--color-white);
   display: flex !important;
   justify-content: center;

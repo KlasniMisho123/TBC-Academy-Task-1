@@ -55,6 +55,7 @@ body {
     color:  var(--color-text-dark);
     box-sizing: border-box;
     animation: header-animation 0.5s ease-in-out forwards;
+    z-index: 100;
 }
 
 .main-logo {
@@ -277,6 +278,7 @@ body {
   font-weight: 500;
   color: var(--color-text-muted);
   /* height: max-content !important; */
+  z-index: 100;
 }
 
 /* Main nav list */
@@ -393,6 +395,14 @@ body {
 .dashboard-content-div {
   margin: 20px 20px;
   width: 100%;
+}
+
+.dashboard-content-header {
+  animation: slideDown 0.5s ease-in forwards ;
+}
+
+.slideDownAnimaiton {
+  
 }
 
 .dashboard-content-header-div {
@@ -1664,4 +1674,38 @@ body {
 .carousel-btn:disabled {
   opacity: 0.3;
   cursor: default;
+}
+
+/* Animations  */
+
+.slideDownAnimaiton {
+  animation: slideDown 0.5s ease-in forwards ;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.slideRightAnimaiton {
+  animation: slideRight 0.5s ease-in forwards ;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
