@@ -22,13 +22,14 @@ body {
   --color-alert: #f87171;
   --color-success: #34d399;
 
-  --color-text-light: #E5E7EB;
-  --color-text-dark: #F9FAFB;
+  --color-text-light: #c9ced6;
+  --color-text-dark: #d5d9dc;
   --color-text-muted: #9CA3AF;
 
   --color-bg-light: #1F2937;
   --color-bg-overlay: rgba(255, 255, 255, 0.05);
   --color-white: #111827;
+  --color-white-white: #FFFFFF;
   --color-light-blue: #1e3a8a;
   --color-light-purple: #4c1d95;
 
@@ -120,9 +121,9 @@ body {
   padding: 0.65rem 1.25rem;
   cursor: pointer;
   border-radius: 12px;
-  background: rgba(91, 33, 182, 0.1);
+  background: var();
   backdrop-filter: blur(10px);  
-  color: #5B21B6;
+  color: var(--color-text-muted);
   font-weight: 600;
   font-size: 0.95rem;
   letter-spacing: 0.3px;
@@ -531,7 +532,6 @@ body {
   height: 120px;
   object-fit: fill;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
 }
 
 .card-balance {
@@ -1399,6 +1399,7 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   padding: 1rem 1.25rem;
+  color: var(--color-white-white);
 }
 
 .goal-title {
