@@ -57,15 +57,22 @@
         <!-- Sidebar HTML -->
         <section class="side-nav slide-right-animaiton ">
             <ul>
+                <li>
+                    <a href="/">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+        
                 <li class="active-link">
-                <a href="/">
-                    <i class="fa-solid fa-gauge-high"></i>
-                    <span>Dashboard</span>
-                </a>
+                    <a href="#transfers">
+                    <i class="fa-solid fa-receipt"></i>
+                        <span>Transactions</span>
+                    </a>
                 </li>
 
-                <ul class="sub-links">
-                    <li><a href="#bankcard-section">Cards</a></li>
+                 <ul class="sub-links">
+                    <li><a href="#main-actions-grid">Actions</a></li>
                     <li><a href="#expenses-content">Expenses</a></li>
                     <li><a href="#goal-tracker-section">Goal Tracker</a></li>
                 </ul>
@@ -77,16 +84,10 @@
                 </a>
                 </li>
 
-                <li>
-                <a href="#transfers">
-                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                    <span>Transactions</span>
-                </a>
-                </li>
 
                 <li>
                 <a href="#transactions">
-                    <i class="fa-solid fa-receipt"></i>
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
                     <span>Transactions</span>
                 </a>
                 </li>
@@ -111,90 +112,86 @@
         <section class="dashboard-content-div">
             <div class="dashboard-content-header-div slide-down-animaiton ">
                 <div class="dashboard-content-header">
-                    <h3>Your Banking Dashboard</h3>
+                    <h3><i class="fa-solid fa-moon"></i> Mooney Transactions</h3>
                     <p>Zoe, Welcome to <span class="brand-name">Mooney</span> </p>
                 </div>
 
-                <div class="dashboard-content-time">
+                <!-- <div class="dashboard-content-time">
                     <div>12 M</div>
                     <div>1 M</div>
                     <div>7 D</div>
                     <div>24 H</div>
-                </div>
+                </div> -->
             </div>
-            <section id="bankcard-section" class="bankcard-section">
-                <div class="bankcard-item switch-in-animation">
-                    <div class="card-header">
-                        <p> <i class="fa-solid fa-credit-card credit-card "></i> Primary Card</p>
-                        <i class="fa-solid fa-gear gear"></i>
-                    </div>
+           <section class="main-actions-grid">
 
-                    <div class="card-body">
-                        <div class="card-img-div">
-                            <img src="/public/images/bankCard1.png" alt="card1" />
-                            
-                            <div class="card-balance">
-                            <div>Current Balance</div>
-                            <h5>1,250₾</h5>
-                        </div>
-                        </div>
+  <div class="main-actions-item action-violet">
+    <div class="main-actions-content">
+      <i class="fa-solid fa-wallet action-icon"></i>
+      <h4 class="action-title">Pay Off</h4>
+      <p class="action-desc">Clear your outstanding balances</p>
+    </div>
+  </div>
 
-                        <div class="card-stat">
-                            <p>Cashback</p>
-                            <p>Month</p>
-                            <h6>19₾ <i class="fa-solid fa-arrow-trend-up"></i> </h6>
-                        </div>
+  <div class="main-actions-item action-blue">
+    <div class="main-actions-content">
+      <i class="fa-solid fa-right-left action-icon"></i>
+      <h4 class="action-title">Transfer to Other</h4>
+      <p class="action-desc">Send money to friends or others</p>
+    </div>
+  </div>
 
-                    </div>
-                </div>
-                <div class="bankcard-item switch-in-animation " style="animation-delay: 0.5s;">
-                    <div class="card-header">
-                        <p><i class="fa-solid fa-plane-departure travel-icon"></i> Travel Card</p>
-                        <i class="fa-solid fa-gear gear"></i>
-                    </div>
+  <div class="main-actions-item action-green">
+    <div class="main-actions-content">
+      <i class="fa-solid fa-building-columns action-icon"></i>
+      <h4 class="action-title">Transfer to Your Account</h4>
+      <p class="action-desc">Move funds between your accounts</p>
+    </div>
+  </div>
 
-                    <div class="card-body">
-                        <div class="card-img-div">
-                            <img src="/public/images/bankCard3.png" alt="card3" />
-                            <div class="card-balance">
-                            <div>Current Balance</div>
-                            <h5>980₾</h5>
-                        </div>
-                        </div>
+  <div class="main-actions-item action-amber">
+    <div class="main-actions-content">
+      <i class="fa-solid fa-arrows-rotate action-icon"></i>
+      <h4 class="action-title">Convert Valut</h4>
+      <p class="action-desc">Exchange currency at best rates</p>
+    </div>
+  </div>
 
-                        <div class="card-stat positive-stat">
-                        <p>Miles Earned</p>
-                        <p>Month</p>
-                        <h6>12,500 <i class="fa-solid fa-arrow-trend-up"></i></h6>
-                        </div>
-                    </div>
-                </div>
+  <div class="main-actions-item action-red">
+    <div class="main-actions-content">
+      <i class="fa-solid fa-building action-icon"></i>
+      <h4 class="action-title">Transfer to Other Bank</h4>
+      <p class="action-desc">Send money to external banks</p>
+    </div>
+  </div>
+
+  <div class="main-actions-item action-cyan">
+    <div class="main-actions-content">
+      <i class="fa-solid fa-hand-holding-dollar action-icon"></i>
+      <h4 class="action-title">Request Money</h4>
+      <p class="action-desc">Ask for payments from contacts</p>
+    </div>
+  </div>
+
+  <div class="main-actions-item action-violet">
+    <div class="main-actions-content">
+      <i class="fa-solid fa-clock-rotate-left action-icon"></i>
+      <h4 class="action-title">Transactions</h4>
+      <p class="action-desc">View your transaction history</p>
+    </div>
+  </div>
+
+  <div class="main-actions-item action-blue">
+    <div class="main-actions-content">
+      <i class="fa-solid fa-bullseye action-icon"></i>
+      <h4 class="action-title">Transfer to Goal</h4>
+      <p class="action-desc">Contribute to your goals</p>
+    </div>
+  </div>
+
+</section>
 
 
-                <div class="bankcard-item switch-in-animation" style="animation-delay: 1s;">
-                    <div class="card-header">
-                        <p><i class="fa-solid fa-credit-card credit-card"></i> Secondary Card</p>
-                        <i class="fa-solid fa-gear gear"></i>
-                    </div>
-
-                    <div class="card-body">
-                        <div class="card-img-div">
-                            <img src="/public/images/bankCard2.png" alt="card2" />
-                            
-                            <div class="card-balance">
-                            <div>Current Balance</div>
-                            <h5>650₾</h5>
-                        </div>
-                        </div>
-
-                        <div class="card-stat negative-stat">
-                        <p>Overdue Payments</p>
-                        <p>Month</p>
-                        <h6>-32₾ <i class="fa-solid fa-arrow-trend-down"></i></h6>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <div class="moony-horizontal-card ">
                 <div class="moonypoints slide-right-animaiton">
                     <div class="moon-icon">
