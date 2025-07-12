@@ -1862,24 +1862,78 @@ body {
 .transactions-section {
   padding: 2rem 1rem;
   max-width: 100%;
+  background-color: var(--color-white);
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 2rem 0;
 }
 
 .transactions-section-header {
   display: flex;
-  width: 95%;
   justify-content: space-between;
   align-items: center;
-  margin: 0 20px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.transactions-section-header > h3{
-  font-size: 1.8rem;
+.transactions-section-header h3 {
+  font-size: 1.75rem;
   color: var(--color-text-dark);
-  margin-bottom: 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
+
+.transaction-icon {
+  color: var(--color-primary);
+}
+
+.search-div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-primary-light);
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--color-white);
+  overflow: hidden;
+}
+
+.search-div input {
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  background-color: transparent;
+  color: var(--color-text-dark);
+}
+
+.search-div button {
+  position: absolute;
+  right: 0;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-primary);
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.search-div button:hover {
+  background-color: var(--color-primary-light);
+}
+
 
 .transaction-icon {
   color: var(--color-primary);
@@ -1899,7 +1953,7 @@ body {
   border-radius: 999px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .filter-button.active {
@@ -1974,4 +2028,13 @@ body {
 
 .transaction-amount.transfer {
   color: var(--color-secondary-theme);
+}
+
+.transaction-icon-wrapper.people-transfer {
+  background-color: #ede9fe; 
+  color: var(--color-primary);
+}
+
+.transaction-amount.people-transfer {
+  color: var(--color-primary);
 }
