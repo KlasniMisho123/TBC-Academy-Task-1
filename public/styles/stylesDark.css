@@ -11,36 +11,36 @@ body {
 
 :root {
   /* Primary Colors */
-  --color-primary: #5B21B6; /* Purple (from second set, more recent) */
-  --color-primary-light: #a78bfa;     /* lighter purple */
-  --color-primary-lighter: #ddd6fe;   /* even lighter purple */
+  --color-primary: #c4b5fd; /* Light Purple for highlights */
+  --color-primary-light: #a78bfa;
+  --color-primary-lighter: #7c3aed;
 
   /* Secondary Colors */
-  --color-secondary: #8B5CF6; /* Purple (from second set) */
-  --color-secondary-theme: #2563EB; /* Blue */
-  --color-secondary-light: #93c5fd;   /* lighter blue */
-  --color-secondary-lighter: #bfdbfe; /* even lighter blue */
+  --color-secondary: #60a5fa; /* Soft blue accent */
+  --color-secondary-theme: #3b82f6;
+  --color-secondary-light: #93c5fd;
+  --color-secondary-lighter: #bfdbfe;
 
   /* Alert/Status Colors */
-  --color-alert: #EF4444; /* Red (from second set) */
-  --color-success: #10B981; /* Green */
-  
+  --color-alert: #f87171; /* Soft Red */
+  --color-success: #34d399; /* Lighter green for contrast */
+
   /* Text Colors */
-  --color-text-light: #f0f0f0; /* from first set */
-  --color-text-dark: #1F2937;
-  --color-text-muted: #6B7280;
-  
+  --color-text-light: #E5E7EB; /* Light Gray for dark bg */
+  --color-text-dark: #F9FAFB; /* Almost white */
+  --color-text-muted: #9CA3AF; /* Medium-light gray */
+
   /* Background Colors */
-  --color-bg-light: #F3F4F6;
-  --color-bg-overlay: rgba(0, 0, 0, 0.75); /* from first set */
-  --color-white: #FFFFFF;
-  --color-light-blue: #DBEAFE;
-  --color-light-purple: #EDE9FE;
-  
+  --color-bg-light: #1F2937; /* Dark gray background */
+  --color-bg-overlay: rgba(255, 255, 255, 0.05); /* light overlay */
+  --color-white: #111827; /* very dark, acts as base card */
+  --color-light-blue: #1e3a8a; /* deep blue */
+  --color-light-purple: #4c1d95; /* deep purple */
+
   /* Special Purpose Colors */
-  --color-vacation: #3b82f6; /* Blue-ish (from first set) */
-  --color-car: #f59e0b; /* Amber (from first set) */
-  --color-home: #10b981; /* Green (from first set) */
+  --color-vacation: #60a5fa; /* lighter blue */
+  --color-car: #fbbf24; /* soft amber */
+  --color-home: #22c55e; /* green, vibrant but still readable */
 }
 
 
