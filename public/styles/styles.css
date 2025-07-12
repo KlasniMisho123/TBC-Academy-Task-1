@@ -1856,3 +1856,122 @@ body {
   color: var(--color-text-muted);
   margin: 0;
 }
+
+/* Transactions Element */
+
+.transactions-section {
+  padding: 2rem 1rem;
+  max-width: 100%;
+}
+
+.transactions-section-header {
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.transactions-section-header > h3{
+  font-size: 1.8rem;
+  color: var(--color-text-dark);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.transaction-icon {
+  color: var(--color-primary);
+}
+
+.transaction-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-button {
+  background: var(--color-bg-light);
+  border: 1px solid var(--color-primary-light);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.filter-button.active {
+  background: var(--color-primary);
+  color: white;
+}
+
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.transaction-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.transaction-icon-wrapper {
+  background: var(--color-bg-light);
+  padding: 0.75rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transaction-icon-wrapper.income {
+  background-color: #d1fae5; /* light green */
+  color: var(--color-success);
+}
+
+.transaction-icon-wrapper.expense {
+  background-color: #fee2e2; /* light red */
+  color: var(--color-alert);
+}
+
+.transaction-icon-wrapper.transfer {
+  background-color: #dbeafe; /* light blue */
+  color: var(--color-secondary-theme);
+}
+
+.transaction-info h4 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.transaction-info p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.transaction-amount {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.transaction-amount.income {
+  color: var(--color-success);
+}
+
+.transaction-amount.expense {
+  color: var(--color-alert);
+}
+
+.transaction-amount.transfer {
+  color: var(--color-secondary-theme);
+}
