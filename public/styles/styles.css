@@ -421,12 +421,9 @@ body {
 
 .dashboard-content-time {
   display: flex;
-  gap: 0.5rem;
-}
-
-.dashboard-content-time {
-  display: flex;
   margin: 1rem 0;
+  gap: 0.5rem;
+  border-radius: 12px;
   width: max-content;
   background-color: var(--color-bg-light); 
 }
@@ -2053,6 +2050,13 @@ body {
   gap: 1rem;
 }
 
+.transaction-log-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+
 .profile-icon img {
   width: 48px;
   height: 48px;
@@ -2124,4 +2128,57 @@ body {
 
 .transaction-amount.people-transfer {
   color: var(--color-primary);
+}
+
+.transaction-log-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.transaction-log-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.log-profile-icon {
+  font-size: 1.6rem;
+  background: var(--color-bg-light);
+  padding: 0.6rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.log-info h4 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.log-info p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.log-amount {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.log-amount.income {
+  color: var(--color-success);
+}
+
+.log-amount.expense {
+  color: var(--color-alert);
+}
+
+.log-amount.transfer {
+  color: var(--color-secondary-theme);
 }
