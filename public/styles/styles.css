@@ -2304,3 +2304,41 @@ body {
   color: white;
 }
 
+.transaction-contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  gap: 1rem;
+}
+
+.profile-icon img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.contact-name {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-dark);
+}
+
+.transfer-icon {
+  background-color: var(--color-secondary-theme);
+  border: none;
+  background-color: var(--color-secondary-theme);
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  color: var(--color-white);
+  cursor: pointer;
+}
+.transfer-icon:hover {
+  background-color: var(--color-secondary-light);
+}
