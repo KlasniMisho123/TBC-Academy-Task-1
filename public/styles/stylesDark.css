@@ -160,7 +160,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid #ccc;
+  border: 2px solid var(--color-secondary-theme) ;
   border-radius: 999px;
   padding: 4px 8px;
   width: 100px;
@@ -176,8 +176,8 @@ body {
 }
 
 .theme-toggle-button.dark {
-  background-color: #374151; /* gray-700 */
-  border-color: #e5e7eb;     /* gray-100 */
+  background-color: #374151;
+  border-color: #e5e7eb;  
 }
 
 .sun-icon,
@@ -1405,7 +1405,6 @@ body {
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 0.3rem;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
 }
 
 .goal-desc {
@@ -1658,4 +1657,75 @@ body {
 .carousel-btn:disabled {
   opacity: 0.3;
   cursor: default;
+}
+
+/* Animations  */
+
+.slide-down-animaiton {
+  animation: slideDown 0.5s ease-in forwards ;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.slide-right-animaiton {
+  animation: slideRight 0.5s ease-in forwards ;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.slide-left-animaiton {
+  animation: slideLeft 0.5s ease-in forwards ;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.switch-in-animation {
+  opacity: 0; 
+  transform: translateY(-100px) rotateX(90deg);
+  animation: switchInAnimation 1.5s ease-in-out forwards ; 
+}
+
+@keyframes switchInAnimation {
+ 0% {
+        opacity: 0; 
+        transform: translateY(-100px) rotateX(90deg); 
+    } 
+    10% {
+      opacity: 0; 
+      transform: translateY(-100px) rotateX(90deg); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotateX(0deg); 
+    }
 }
