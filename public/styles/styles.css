@@ -4,7 +4,7 @@ html {
 
 body {
   font-family: Arial, sans-serif;
-  background: #ffffff;
+  background: #fcfcfc;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -1962,6 +1962,11 @@ body {
   color: white;
 }
 
+.filter-button:hover {
+  background: var(--color-primary-light);
+  color: white;
+}
+
 .transaction-stats {
   display: flex;
   gap: 1.5rem;
@@ -2209,3 +2214,93 @@ body {
 .dot.other { background-color: #ef4444; }
 
 /* contacts section */
+
+.contacts-section {
+ padding: 2rem 1rem;
+  max-width: 100%;
+  background-color: var(--color-white);
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+
+.contacts-icon {
+  color: var(--color-secondary-theme);
+}
+
+.contacts-search-div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-secondary-theme);
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--color-white);
+  overflow: hidden;
+}
+
+.contacts-search-div input {
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  background-color: transparent;
+  color: var(--color-text-dark);
+}
+
+.contacts-search-div button {
+  position: absolute;
+  right: 0;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-secondary-theme);
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.contacts-search-div button:hover {
+  position: absolute;
+  right: 0;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-secondary-lighter);
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.contact-filter-button {
+  background: var(--color-bg-light);
+  border: 1px solid var(--color-secondary-theme);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-filter-button.active {
+  background: var(--color-secondary-theme);
+  color: white;
+}
+
+.contact-filter-button:hover {
+  background: var(--color-secondary-light);
+  color: white;
+}
+
