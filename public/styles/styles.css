@@ -11,37 +11,32 @@ body {
 }
 
 :root {
-  /* Primary Colors */
-  --color-primary: #5B21B6; /* Purple (from second set, more recent) */
-  --color-primary-light: #a78bfa;     /* lighter purple */
-  --color-primary-lighter: #ddd6fe;   /* even lighter purple */
+  --color-primary: #5B21B6;
+  --color-primary-light: #a78bfa;
+  --color-primary-lighter: #ddd6fe; 
 
-  /* Secondary Colors */
-  --color-secondary: #8B5CF6; /* Purple (from second set) */
-  --color-secondary-theme: #2563EB; /* Blue */
-  --color-secondary-light: #93c5fd;   /* lighter blue */
-  --color-secondary-lighter: #bfdbfe; /* even lighter blue */
+  --color-secondary: #8B5CF6;
+  --color-secondary-theme: #2563EB;
+  --color-secondary-light: #93c5fd;
+  --color-secondary-lighter: #bfdbfe; 
 
-  /* Alert/Status Colors */
-  --color-alert: #EF4444; /* Red (from second set) */
-  --color-success: #10B981; /* Green */
+  --color-alert: #EF4444;
+  --color-success: #10B981; 
   
-  /* Text Colors */
-  --color-text-light: #f0f0f0; /* from first set */
+  --color-text-light: #f0f0f0; 
   --color-text-dark: #1F2937;
   --color-text-muted: #6B7280;
   
-  /* Background Colors */
   --color-bg-light: #F3F4F6;
-  --color-bg-overlay: rgba(0, 0, 0, 0.75); /* from first set */
+  --color-bg-overlay: rgba(0, 0, 0, 0.75); 
   --color-white: #FFFFFF;
+  --color-white-white: #FFFFFF;
   --color-light-blue: #DBEAFE;
   --color-light-purple: #EDE9FE;
   
-  /* Special Purpose Colors */
-  --color-vacation: #3b82f6; /* Blue-ish (from first set) */
-  --color-car: #f59e0b; /* Amber (from first set) */
-  --color-home: #10b981; /* Green (from first set) */
+  --color-vacation: #3b82f6;
+  --color-car: #f59e0b;
+  --color-home: #10b981;/
 }
 
 
@@ -2033,6 +2028,98 @@ body {
 .transaction-icon-wrapper.people-transfer {
   background-color: #ede9fe; 
   color: var(--color-primary);
+}
+
+.transaction-amount.people-transfer {
+  color: var(--color-primary);
+}
+
+/* Transaction logs */
+
+.transaction-log-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.transaction-log-item {
+  display: flex;
+  align-items: center;
+  background: var(--color-white);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  gap: 1rem;
+}
+
+.profile-icon img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--color-white-white);
+}
+
+.transaction-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.transaction-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transaction-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.transaction-amount {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.transaction-subinfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.status-label {
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+}
+
+.status-label.expense {
+  background: #fee2e2;
+  color: var(--color-alert);
+}
+
+.status-label.income {
+  background: #d1fae5;
+  color: var(--color-success);
+}
+
+.status-label.people-transfer {
+  background: #ede9fe;
+  color: var(--color-primary);
+}
+
+.transaction-amount.expense {
+  color: var(--color-alert);
+}
+
+.transaction-amount.income {
+  color: var(--color-success);
 }
 
 .transaction-amount.people-transfer {
