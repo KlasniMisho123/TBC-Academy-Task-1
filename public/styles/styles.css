@@ -106,7 +106,7 @@ body {
   align-items: center;
   gap: 1rem;
   background: transparent;
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
   border-radius: 12px;
   height: max-content;
 }
@@ -172,6 +172,7 @@ body {
   gap: 30px;
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s;
+  text-decoration: none;
 }
 
 .theme-toggle-button.light {
@@ -261,7 +262,7 @@ body {
 
 .main-content-div {
   display: flex;
-  margin: 20px 0 0 0;
+  margin: 20px 0 20px 0;
 }
 
 /* Sidenav Element Starts */
@@ -275,6 +276,7 @@ body {
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--color-text-muted);
+  /* height: max-content !important; */
 }
 
 /* Main nav list */
