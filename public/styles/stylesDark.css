@@ -394,7 +394,7 @@ body {
 
 .dashboard-content-header > h3 {
   font-size: 2rem;
-  color: var(--color-primary);
+  color: var(--color-white-white);
   font-weight: 700;
   margin-bottom: 0.5rem;
   letter-spacing: 0.5px;
@@ -1929,6 +1929,7 @@ body {
 .filter-button {
   background: var(--color-bg-light);
   border: 1px solid var(--color-primary-light);
+  color: var(--color-white-white);
   padding: 0.5rem 1rem;
   border-radius: 999px;
   font-weight: 600;
@@ -2072,6 +2073,7 @@ body {
 }
 
 .transaction-name {
+  color: var(--color-white-white);
   font-size: 1rem;
   margin: 0;
   font-weight: 600;
@@ -2266,6 +2268,7 @@ body {
 .contact-filter-button {
   background: var(--color-bg-light);
   border: 1px solid var(--color-secondary-theme);
+  color: var(--color-white-white);
   padding: 0.5rem 1rem;
   border-radius: 999px;
   font-weight: 600;
