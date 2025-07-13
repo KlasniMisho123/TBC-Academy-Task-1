@@ -2092,6 +2092,9 @@ body {
   font-size: 0.85rem;
   color: var(--color-text-muted);
 }
+.status-label {
+  height: max-content;
+}
 
 .status-label.expense {
   background: #fee2e2;
@@ -2425,8 +2428,29 @@ body {
     display: inline;
     margin: auto 0;
   }
+  .main-actions-item {
+     padding: 0.5rem 0.7rem;
+  }
 
+  .dashboard-content-div {
+      margin: 5px 5px;
+      width: 60%;
+  }
 
+  .action-desc  {
+    white-space: wrap;
+  }
+
+  .side-nav {
+    width: 100px;
+    padding: 1rem 0.5rem;
+  }
+
+  .side-nav {
+    width: 100px;
+    font-size: 12px;
+    padding: 1rem 0.5rem;
+  }
 }
 
 /* Tablet (≥ 600px) */
@@ -2473,10 +2497,9 @@ body {
 
   .dashboard-content-div {
       margin: 10px 10px;
-      width: 100%;
-    }
+      width: 80%;
+  }
 }
-
 
 
 /* Desktop (≥ 1024px) */
@@ -2496,6 +2519,10 @@ body {
   .side-nav {
     width: 180px;
     padding: 1.5rem 1rem;
+  }
+
+  .main-actions-item {
+   padding: 1.2rem 1.5rem;
   }
 }
 
