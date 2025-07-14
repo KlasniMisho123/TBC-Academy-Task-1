@@ -36,6 +36,7 @@ body {
   --color-vacation: #60a5fa;
   --color-car: #fbbf24;
   --color-home: #22c55e;
+  --color-teal: #14b8a6;
 }
 
 .header {
@@ -2400,6 +2401,178 @@ body {
 .career-form button:hover {
   background-color: var(--color-primary-light);
 }
+
+.process-section {
+  padding: 2rem;
+  color: var(--color-text-light);
+  background-color: var(--color-bg-light);
+  display: flex;
+  gap: 2rem;
+  border-radius: 16px;
+}
+
+.process-header {
+  flex: 1;
+}
+
+.process-header h4 {
+  font-size: 1.5rem;
+  color: var(--color-white-white);
+}
+
+.process-header .highlighted {
+  background: linear-gradient(to right, var(--color-primary), var(--color-bg-light));
+  padding: 0 0.25rem;
+  font-weight: bold;
+}
+
+.process-header h2 {
+  font-size: 2rem;
+  color: var(--color-white-white);
+}
+
+.process-header .emphasis {
+  color: var(--color-primary);
+}
+
+.process-header p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  flex: 1.5;
+}
+
+.step-card {
+  background-color: var(--color-white);
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.step-card i {
+  font-size: 3rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  opacity: 1;
+}
+
+
+.step-card h3 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: var(--color-text-dark);
+}
+
+.step-card p {
+  color: var(--color-text-muted);
+  margin-top: 1rem;
+}
+
+.step-card p span {
+  font-weight: bold;
+  color: var(--color-secondary-theme);
+}
+
+/* Theme Color Per Card */
+.step-card.idea {
+  border-left: 6px solid var(--color-car);
+}
+
+.step-card.idea > i{
+  color: var(--color-car);
+}
+
+.step-card.design {
+  border-left: 6px solid var(--color-secondary);
+}
+.step-card.design > i{
+  color: var(--color-secondary);
+}
+
+.step-card.testing {
+  border-left: 6px solid var(--color-teal);
+}
+
+.step-card.testing > i{
+  color: var(--color-teal);
+}
+
+.step-card.launch {
+  border-left: 6px solid var(--color-alert);
+}
+
+.step-card.launch > i{
+  color: var(--color-alert);
+}
+
+.process-steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.process-step {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-white);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.process-step:hover {
+  background-color: var(--color-bg-overlay);
+  transform: translateY(-2px);
+}
+
+.step-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: var(--color-primary);
+  transition: color 0.3s ease;
+}
+
+.process-step:hover .step-icon {
+  color: var(--color-secondary-theme);
+}
+
+.step-title {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+
+/* Responsive */
+@media (min-width: 768px) {
+  .process-steps {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 
 /* Responsive - Tablet and up */
 @media (min-width: 600px) {
