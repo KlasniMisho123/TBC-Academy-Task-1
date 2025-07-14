@@ -524,6 +524,7 @@ body {
   gap: 1rem;
   
 }
+
 .card-img-div {
   display: flex;
   align-items: center;
@@ -550,10 +551,6 @@ body {
 }
 
 .card-stat {
-  font-size: 0.85rem;
-  opacity: 0.85;
-}
-.card-stat {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -562,6 +559,8 @@ body {
   font-size: 0.85rem;
   padding-top: 0.5rem;
   margin-left: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.85;
 }
 
 .card-stat p {
@@ -610,6 +609,7 @@ body {
 .expenses-content {
   margin: 4rem 0px ;
   display: flex;
+  flex-direction: row;
   width: 100%;
   gap: 2rem;
 }
@@ -644,7 +644,7 @@ body {
   justify-content: space-between;
 }
 
-.recent-transactions-div > button {
+.recent-transactions-button {
   overflow: hidden;
   flex: 1;
   display: flex;
@@ -658,13 +658,13 @@ body {
   max-height: 50px;
 }
 
-.recent-transactions-div > button:hover {
+.recent-transactions-button {
   transition: all 0.5s ease;
   background-color: var(--color-text-dark);
   color: var(--color-white);
 }
 
-.recent-transactions-div > button:hover > i {
+.recent-transactions-button:hover > i {
   transition: all 0.5s ease;
   transform: translate(20px, -300%);
 }
@@ -761,6 +761,7 @@ body {
 .expenses-info-item {
   flex: 1;
   display: flex;
+  flex-wrap: wrap;
   padding: 1rem;
   background-color: var(--color-white);
   color: var(--color-text-dark);
@@ -1231,6 +1232,7 @@ body {
   user-select: none;
   transition: box-shadow 0.3s ease;
   margin-top: 50px;
+  overflow: hidden;
 }
 
 .moony-horizontal-card:hover {
@@ -2402,6 +2404,8 @@ body {
     padding: 0.4rem 0.8rem;
     font-size: 0.85rem;
   }
+
+ 
 }
 
 /* RESPONSIVE */
@@ -2542,6 +2546,95 @@ body {
   .transactions-section {
     min-width: 100px;
   }
+
+  /* Dashboard Page */
+
+  
+  .card-img-div {
+    flex-direction: column;
+  }
+
+  .card-body {
+    flex-direction: column;
+  }
+    .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem; 
+  }
+
+  .card-img-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .moony-horizontal-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .expenses-content {
+    margin: 2rem 0px ;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .recent-transaction-item {
+    flex-direction: column;
+    text-align: center;
+    max-height: 200px;
+    gap: 0.5rem
+  }
+   .recent-transactions-content {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .expenses-info-div{
+    flex-direction: column;
+  }
+
+}
+
+/* Dekstop >= 400px */
+@media (min-width: 400px) {
+  .card-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem; 
+  }
+
+  .card-img-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  .card-stat {
+    margin-left: 0;
+  }
+
+  .moony-horizontal-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .moonypoints {
+    width: 100px;
+  }
+
+   .recent-transaction-item {
+    flex-direction: column;
+  }
 }
 
 /* Tablet (≥ 600px) */
@@ -2633,6 +2726,58 @@ body {
   .transaction-subinfo {
     flex-direction: row;
   }
+
+  /* Dashboard Page */
+  .bankcard-section {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    white-space: nowrap;
+  }
+  .card-stat {
+    margin-left: 1rem;
+  }
+
+  .moony-horizontal-card {
+    display: flex;
+    flex-direction: row;
+  }
+
+   .moonypoints {
+    width: 150px;
+  }
+
+  .expenses-content {
+    margin: 2rem 0px ;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 2rem;
+  }
+  .recent-transactions-header {
+    max-height: 100px;
+  }
+
+  .recent-transactions-div {
+    height: max-content;
+  }
+
+  .recent-transaction-item {
+    display: flex;
+    flex-direction: row;
+    max-height: 200px;
+    gap: 0.5rem
+  }
+
+  .recent-transactions-content {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .expenses-info-div{
+    flex-direction: row;
+  }
 }
 
 
@@ -2683,9 +2828,64 @@ body {
     flex-wrap: nowrap;
     gap: 0.75rem;
   }
+
   .transactions-section-header > h3 {
     font-size: 1.25rem;
   }
+
+  .navbar-div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+  background: transparent;
+  padding: 0rem 2rem;
+  border-radius: 12px;
+}
+
+  .navbar-div a > div {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .navbar-div a > div {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Dashboard Page */
+
+  .card-img-div {
+    display: flex;
+    flex-direction: flex;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: flex;
+  }
+
+  .bankcard-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    white-space: nowrap;
+  }
+
+  .recent-transaction-item {
+    max-height: 200px;
+    gap: 0.1rem
+  }
+
+  .recent-transaction-item {
+    display: flex;
+    flex-direction: row;
+    max-height: 200px;
+    gap: 0.5rem
+  }
   
+  .recent-transactions-content {
+    overflow-y: hidden;
+  }
 }
 
