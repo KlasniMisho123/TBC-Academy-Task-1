@@ -64,3 +64,57 @@ addBook(book)
 Adds a new book to the library collection. Each book should include:
 
 borrowBook(userName, bookId)
+
+
+Check if the book is available.
+Mark the book as unavailable.
+Add a borrow entry to the user with:
+borrowDate
+dueDate = 14 days from borrowDate.
+
+🟦 returnBook(userName, bookId)
+Mark the book as available.
+If returned after due date:
+Add penalty points to the user.
+Otherwise, print a thank-you message.
+
+🔍 searchBooksBy(param, value)
+Search books based on dynamic parameters:
+author
+genre
+rating (greater than or equal)
+year (before/after a certain year)
+Return a filtered list of books.
+
+🧠 getTopRatedBooks(limit)
+Returns the top N books with the highest ratings.
+
+🧠 getMostPopularBooks(limit)
+Returns the top N most borrowed books based on borrowCount.
+
+📛 checkOverdueUsers()
+List all users who have overdue books.
+Also include how many days overdue each one is.
+
+📚 recommendBooks(userName)
+Personalized recommendations based on:
+Genres the user has borrowed before
+
+Books they haven’t borrowed yet
+Sorted by rating (high to low)
+
+🧠 removeBook(bookId)
+Remove a book from the system — only if it’s not currently borrowed.
+
+📄 printUserSummary(userName)
+Show:
+
+List of currently borrowed books
+
+Any overdue items
+
+Total penalty points
+
+📄 Data Initialization
+No need for UI or user input.
+Predefine your books and users in the code using mock/random data.
