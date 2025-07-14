@@ -1721,6 +1721,22 @@ body {
   }
 }
 
+.slide-from-top-animaiton {
+  animation: slideFromTop 0.5s ease-in forwards;  
+}
+
+@keyframes slideFromTop {
+  0% {
+      transform: translatey(-30%);
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translatey(0px);
+    }
+}
+
 .switch-in-animation {
   opacity: 0; 
   transform: translateY(-100px) rotateX(90deg);
@@ -1870,6 +1886,7 @@ body {
   margin-bottom: 1.5rem;
   flex-wrap: wrap;
   gap: 1rem;
+  z-index: 100;
 }
 
 .transactions-section-header h3 {
