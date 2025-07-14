@@ -2340,6 +2340,7 @@ body {
   background-color: var(--color-secondary-light);
 }
 
+/* RESPONSIVE */
 
 /* ----------- Mobile (≤ 480px) ----------- */
 @media (max-width: 480px) {
@@ -2411,8 +2412,6 @@ body {
 
  
 }
-
-/* RESPONSIVE */
 
 @media (min-width: 0px) {
   .main-actions-grid {
