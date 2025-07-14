@@ -1956,7 +1956,7 @@ body {
 }
 
 .stat-card {
-  flex: 1 1 200px;
+  
   background: var(--color-white);
   border-radius: 12px;
   display: flex;
@@ -2513,8 +2513,24 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
   .bar-labels {
     display: flex;
+    flex-direction: column;
+  }
+
+  .stat-card { 
+    flex-direction: column;
+  }
+  .transactions-section-header > h3 {
+    font-size: 0.75rem;
+  }
+  .dashboard-content-time {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .transaction-subinfo {
     flex-direction: column;
   }
 }
@@ -2590,6 +2606,24 @@ body {
     flex-wrap: wrap;
     gap: 0.75rem;
   }
+
+   .stat-card { 
+    flex-direction: flex;
+    flex: 1 1 200px;
+  }
+  .transactions-section-header > h3 {
+    font-size: 0.9rem;
+  }
+
+  .dashboard-content-time {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .transaction-subinfo {
+    flex-direction: row;
+  }
 }
 
 
@@ -2636,8 +2670,13 @@ body {
   }
   
   .bar-labels {
-    display: flex;
-    flex-direction: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.75rem;
   }
+  .transactions-section-header > h3 {
+    font-size: 1.25rem;
+  }
+  
 }
 
