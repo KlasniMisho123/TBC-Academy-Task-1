@@ -2547,10 +2547,14 @@ body {
   margin-right: 1rem;
   color: var(--color-primary);
   transition: color 0.3s ease;
+  padding:  0.4rem 0.5rem 0.4rem 0.5rem;
+  background-color: transparent;
+  border-radius: 100%;
 }
 
 .process-step:hover .step-icon {
-  color: var(--color-secondary-theme);
+  color: var(--color-white-white);
+  background-color: var(--color-primary-lighter);
 }
 
 .step-title {
