@@ -625,6 +625,7 @@ body {
   flex-direction: column;
   gap: 0.25rem;
   flex: 1;
+  min-width: 150px;
 }
 
 .recent-transactions-header {
@@ -742,6 +743,7 @@ body {
   flex-direction: column;
   gap: 0.25rem;
   flex: 2;
+  min-width: 160px;
 }
 
 .expenses-header {
@@ -1233,6 +1235,7 @@ body {
   transition: box-shadow 0.3s ease;
   margin-top: 50px;
   overflow: hidden;
+  min-width: 150px;
 }
 
 .moony-horizontal-card:hover {
@@ -1493,6 +1496,7 @@ body {
   transition: background-color 0.25s ease, box-shadow 0.25s ease;
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
   user-select: none;
+  white-space: nowrap;
 }
 
 /* Pay In Button */
@@ -2600,6 +2604,23 @@ body {
     flex-direction: column;
   }
 
+  .finance-section {
+    padding: 0.25rem;
+  }
+
+  .alert-item {
+    flex-direction: column;
+  }
+
+  .goal-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+  }
+
+  .goal-buttons {
+    flex-direction: column;
+  }
 }
 
 /* Dekstop >= 400px */
@@ -2635,6 +2656,20 @@ body {
    .recent-transaction-item {
     flex-direction: column;
   }
+  .finance-section {
+    padding: 1rem;
+  }
+
+  .alert-item {
+    flex-direction: row;
+  }
+
+  .goal-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
 }
 
 /* Tablet (≥ 600px) */
@@ -2778,6 +2813,16 @@ body {
   .expenses-info-div{
     flex-direction: row;
   }
+
+  .goal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+  }
+
+  .goal-buttons {
+    flex-direction: row;
+  }
 }
 
 
@@ -2807,6 +2852,7 @@ body {
   .finance-section {
     flex: 1 1 320px;
     max-width: 400px;
+    padding: 1rem;
   }
 
   .pie-chart {
@@ -2887,5 +2933,11 @@ body {
   .recent-transactions-content {
     overflow-y: hidden;
   }
+
+  .goal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
 }
 
