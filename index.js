@@ -33,8 +33,8 @@ class VirtualLibrary {
         } 
 
         let user = this.users.find(u => u.name === userName)
-        if(!user) {
-            user = {name: userName, borrowBooks: [], penaltyPoints: 0};
+        if (!user) {
+            user = { name: userName, borrowed: [], penaltyPoints: 0};
             this.users.push(user)
         }
 
@@ -46,6 +46,33 @@ class VirtualLibrary {
         book.available = false;
         book.borrowCount++;
         console.log(`User: ${userName} borrowed book:${book.title}`)
+    }
+
+    returnBook(userName, bookId) {
+        const book = this.books.find(b => b.id === bookId)
+        const user = this.users.find(u => u.name === userName)
+        if(!book || !user) {
+            return console.log("Invalid book or user.")
+        }
+
+        const borrowedEntry = user.borrowed.find(b => b.bookId === bookId)
+        if(!borrowedEntry) {
+            return console.log(`This book wasn't borrowed by user: ${user.name}`)
+        }
+
+        const today = new Date()
+        const dueDate = new Date(borrowedEntry.dueDate)
+
+        user.borrowed = user.borrowed.filter(b => b.bookId !== bookId);
+        book.available = true;
+
+        if(today > dueDate) {
+            const overdueDays = Math.ceil((today - dueDate) / (1000 * 60 * 60 * 24));
+            user.penaltyPoints += overdueDays;
+            console.log(`Book returned late! ${overdueDays} days overdue. Penalty points(${penaltyPoints} applied. )`)
+        } else {
+            console.log("Thank you for returning book on time! ")
+        }
     }
 }
 
@@ -65,7 +92,9 @@ dummyBookData.forEach(book => {
 
 db.borrowBook("misho", 1)
 
-db.removeBook(2);
+// db.removeBook(2);
 
-console.log(db.users)
-console.log(db.books)
+//  - check borrowed books from user-1
+// console.log("borrowed book: ",db.users[0].borrowed)
+db.returnBook("misho", 1)
+// console.log(db.books)
