@@ -101,7 +101,6 @@ body {
   background: transparent;
   padding: 0rem 2rem;
   border-radius: 12px;
-  /* height: max-content; */
 }
 
 .navbar-div a {
@@ -270,11 +269,13 @@ body {
   background-color: var(--color-white);
   padding: 1.5rem 1rem;
   border-radius: 12px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--color-text-muted);
-  height: max-content;
+  z-index: 100;
 }
 
 /* Main nav list */
@@ -2831,6 +2832,10 @@ body {
     grid-template-columns: repeat(3, 1fr); 
   }
   
+  .recent-transactions-div {
+    height: auto;
+  }
+
   .navbar-div {
     display: flex;
   }
