@@ -2527,8 +2527,18 @@ body {
     flex-direction: column;
   }
 
+  .stat-card { 
+    flex-direction: column;
+  }
+  .transactions-section-header > h3 {
+    font-size: 0.75rem;
+  }
   .dashboard-content-time {
     display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .transaction-subinfo {
     flex-direction: column;
   }
 }
@@ -2605,11 +2615,23 @@ body {
     gap: 0.75rem;
   }
 
-  .dashboard-content-time {
-    display: flex;
+   .stat-card { 
     flex-direction: flex;
+    flex: 1 1 200px;
+  }
+  .transactions-section-header > h3 {
+    font-size: 0.9rem;
   }
 
+  .dashboard-content-time {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .transaction-subinfo {
+    flex-direction: row;
+  }
 }
 
 
@@ -2656,13 +2678,13 @@ body {
   }
   
   .bar-labels {
-    display: flex;
-    flex-direction: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.75rem;
   }
-
-  .dashboard-content-time {
-    display: flex;
-    flex-direction: flex;
-  } 
+  .transactions-section-header > h3 {
+    font-size: 1.25rem;
+  }
+  
 }
 

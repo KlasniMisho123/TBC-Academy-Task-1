@@ -2430,6 +2430,11 @@ body {
   }
   .main-actions-item {
      padding: 0.5rem 0.7rem;
+     min-width: 100px;
+  }
+
+  .contacts-section {
+    min-width: 100px;
   }
 
   .dashboard-content-div {
@@ -2532,6 +2537,10 @@ body {
   }
   .transaction-subinfo {
     flex-direction: column;
+  }
+
+  .transactions-section {
+    min-width: 100px;
   }
 }
 
