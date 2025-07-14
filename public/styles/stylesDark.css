@@ -2341,6 +2341,77 @@ body {
   background-color: var(--color-secondary-light);
 }
 
+/* Carrer Page */
+
+.career-section {
+  background-color: var(--color-bg-light);
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.career-header h2 {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+}
+
+.career-header p {
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.career-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.career-form input,
+.career-form textarea {
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-white);
+  font-size: 1rem;
+  color: var(--color-text-dark);
+}
+
+.career-form button {
+  padding: 0.75rem 1.25rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.career-form button:hover {
+  background-color: var(--color-primary-light);
+}
+
+/* Responsive - Tablet and up */
+@media (min-width: 600px) {
+  .form-row {
+    flex-direction: row;
+  }
+
+  .form-row input {
+    flex: 1;
+  }
+}
+
 /* RESPONSIVE */
 
 /* ----------- Mobile (≤ 480px) ----------- */

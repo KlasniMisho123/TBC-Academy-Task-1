@@ -20,21 +20,21 @@
         </div>
 
         <div class="navbar-div">
-            <a href="index.html">
+            <a href="indexDark.html">
                 <div>
                 <i class="fa-solid fa-house"></i>
                 <span>Dashboard</span>
                 </div>
             </a>
 
-            <a href="transactions.html">
+            <a href="transactionsDark.html">
                 <div>
                 <i class="fa-solid fa-money-check-dollar"></i>
                 <span>Transactions</span>
                 </div>
             </a>
 
-            <a href="contact.html" class="activeNav">
+            <a href="careerDark.html" class="activeNav">
                 <div>
                 <i class="fa-solid fa-glasses fa-bounce"></i>
                 <span>Careers</span>
@@ -45,6 +45,92 @@
         <div class="logo-div">
             <img src="/public/images/zoe_kravitz.jpg" class="profile-logo" />
         </div>
+    </section>
+    <section class="main-content-div">
+
+        <!-- Sidebar HTML -->
+        <section class="side-nav slide-right-animaiton ">
+            <ul>
+                <li>
+                <a href="indexDark.html">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <span>Dashboard</span>
+                </a>
+                </li>
+
+                <li>
+                    <a href="transactionsDark.html">
+                        <i class="fa-solid fa-receipt"></i>
+                        <span>Transactions</span>
+                    </a>
+                </li>
+
+                <li class="active-link">
+                    <a href="careerDark.html">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        <span>Career</span>
+                    </a>
+                </li>
+                
+                <ul class="sub-links">
+                    <li><a href="#career-section">Career Section</a></li>
+                </ul>
+
+                <li>
+                <a href="#settings">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+                </li>
+            </ul>
+
+            <div class="profile-picture">
+                <img src="/public/images/zoe_kravitz.jpg" alt="User profile photo" />
+                <div>
+                Log Out <i class="fa-solid fa-right-from-bracket"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-content-div">
+
+            <section id="career-section" class="career-section">
+                <div class="career-header">
+                    <h2>Join Mooney Team</h2>
+                    <p>If you're passionate and want to grow with us, send your details and we'’'ll reach out!</p>
+                </div>
+
+                <form class="career-form">
+                    <div class="form-row">
+                    <input type="text" placeholder="Full Name" required />
+                    <input type="email" placeholder="Email Address" required />
+                    </div>
+                    <div class="form-row">
+                    <input type="text" placeholder="Position of Interest" required />
+                    <input type="text" placeholder="LinkedIn / Portfolio (optional)" />
+                    </div>
+                    <textarea rows="5" placeholder="Tell us a bit about yourself..."></textarea>
+                    <button type="submit">Send Application</button>
+                </form>
+            </section>
+
+        </section>
+        
+    </section>
+    <section class="footer">
+            <div class="logo-div">
+                <img src="/public/images/mooney.png" class="main-logo" />
+            </div>
+            <div class="footer-copy">© 2025 Moneey</div>
+            <div class="theme-toggle-container">
+                <a href="index.html" class="theme-toggle-button light">
+                    <div class="sun-div slide-left-animaiton ">
+                        <img src="/public/images/sun.png" alt="sun" class="sun-icon" />
+                    </div>
+                    <i class="fa-regular fa-circle toggle-circle sun-circle slide-right-animaiton"></i>
+                </a>
+            </div>
+
     </section>
 </body>
 </html>
