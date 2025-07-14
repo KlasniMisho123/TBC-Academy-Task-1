@@ -387,9 +387,6 @@ body {
 }
 
 
-
-/* Sidenav Element Ends */
-
 .dashboard-content-div {
   margin: 20px 20px;
   width: 100%;
@@ -402,7 +399,7 @@ body {
 
 .dashboard-content-header > h3 {
   font-size: 2rem;
-  color: var(--color-primary);
+  color: var(--color-text-dark);
   font-weight: 700;
   margin-bottom: 0.5rem;
   letter-spacing: 0.5px;
