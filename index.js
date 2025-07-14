@@ -74,6 +74,14 @@ class VirtualLibrary {
             console.log("Thank you for returning book on time! ")
         }
     }
+
+    searchBooksBy(param, value) {
+        return this.books.filter(book => {
+            if (param === 'rating') return book.rating >= value;
+            if (param === 'year') return book.year === value || (typeof value === 'object' && value.condition === 'after' ? book.year > value.year : book.year < value.year);
+            return book[param] === value;
+            });
+        }
 }
 
 const db = new VirtualLibrary
@@ -90,11 +98,14 @@ dummyBookData.forEach(book => {
     db.addBook(book)
 });
 
-db.borrowBook("misho", 1)
+// db.borrowBook("misho", 1)
 
 // db.removeBook(2);
 
 //  - check borrowed books from user-1
 // console.log("borrowed book: ",db.users[0].borrowed)
-db.returnBook("misho", 1)
+// db.returnBook("misho", 1)
+// db.searchBooksBy('genre', 'Tech');
 // console.log(db.books)
+
+// Searchbar (improvement:feedbacks)
