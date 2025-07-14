@@ -167,15 +167,18 @@ class VirtualLibrary {
 // ------------------ Demo ------------------
 
 const lib = new VirtualLibrary();
-lib.initMockData();
 
-lib.borrowBook("Alice", 1);
-lib.borrowBook("Bob", 2);
-lib.returnBook("Alice", 1);
-lib.searchBooksBy('genre', 'Tech');
-lib.getTopRatedBooks(3);
-lib.getMostPopularBooks(2);
-lib.printUserSummary("Alice");
 
-console.log("Overdue Users:", lib.checkOverdueUsers());
-console.log("Recommended for Bob:", lib.recommendBooks("Bob"));
+// lib.initMockData();
+
+console.log(lib)
+// lib.borrowBook("Alice", 1);
+// lib.borrowBook("Bob", 2);
+// lib.returnBook("Alice", 1);
+// lib.searchBooksBy('genre', 'Tech');
+// lib.getTopRatedBooks(3);
+// lib.getMostPopularBooks(2);
+// lib.printUserSummary("Alice");
+
+// console.log("Overdue Users:", lib.checkOverdueUsers());
+// console.log("Recommended for Bob:", lib.recommendBooks("Bob"));

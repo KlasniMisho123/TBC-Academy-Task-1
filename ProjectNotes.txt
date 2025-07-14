@@ -1,8 +1,0 @@
-https://dribbble.com/shots/16892626-RE-NEO-Banking-App-Dashboard - transactions
-
-6. Savings Goals Tracker
-Horizontal or circular progress indicators for savings goals (e.g., “Vacation Fund”, “Emergency Savings”)
-
-Show % progress and amount saved
-
-Use subtle animations on progress fill
