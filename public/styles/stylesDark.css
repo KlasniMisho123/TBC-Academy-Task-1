@@ -2348,7 +2348,8 @@ body {
   background-color: var(--color-bg-light);
   padding: 2rem 1rem;
   border-radius: 12px;
-  max-width: 900px;
+  width: 90%;
+  max-width: 850px;
   margin: 2rem auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   font-family: 'Segoe UI', sans-serif;
@@ -2561,32 +2562,6 @@ body {
   font-size: 1rem;
   color: var(--color-text-light);
   margin: 0;
-}
-
-
-/* Responsive */
-@media (min-width: 768px) {
-  .process-steps {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .process-steps {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-
-/* Responsive - Tablet and up */
-@media (min-width: 600px) {
-  .form-row {
-    flex-direction: row;
-  }
-
-  .form-row input {
-    flex: 1;
-  }
 }
 
 /* RESPONSIVE */
@@ -2869,6 +2844,14 @@ body {
   .goal-buttons {
     flex-direction: column;
   }
+
+  .process-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .process-section {
+    padding: 0.5rem;
+  }
 }
 
 /* Dekstop >= 400px */
@@ -2918,6 +2901,7 @@ body {
     gap: 1rem;
   }
 
+  
 }
 
 /* Tablet (≥ 600px) */
@@ -3071,6 +3055,40 @@ body {
   .goal-buttons {
     flex-direction: row;
   }
+
+   .form-row {
+    flex-direction: row;
+  }
+
+  /* Careers */
+
+  .form-row input {
+    flex: 1;
+  }
+
+  .process-step { 
+    flex-direction: row;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .process-steps {
+    grid-template-columns: repeat(1, 1fr);
+  }
+ 
+  .process-section {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .step-card {
+    height: max-content;
+  }
+
+   .process-section {
+    padding: 1rem;
+  }
 }
 
 
@@ -3191,5 +3209,16 @@ body {
       grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
     }
-}
 
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .step-card {
+    height: auto;
+  }
+
+   .process-section {
+    padding: 2rem;
+  }
+}
