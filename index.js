@@ -143,103 +143,111 @@ class VirtualLibrary {
                 .filter(book => book.available && !borrowedIds.has(book.id) && genresSet.has(book.genre))
                 .sort((a,b) => b.rating - a.rating)
     }
+
+    printUserSummary(){
+
+    }
+
+    initMockData() {
+      const dummyBookData = [
+            { id: 1, title: "JS Mastery", author: "Kyle", genre: "Tech", rating: 4.8, year: 2020 },
+            { id: 2, title: "History of Europe", author: "Smith", genre: "History", rating: 4.1, year: 2008 },
+            { id: 3, title: "Romance of Code", author: "Jane", genre: "Romance", rating: 4.7, year: 2019 },
+            { id: 4, title: "Fantasy World", author: "Martin", genre: "Fantasy", rating: 4.9, year: 2022 },
+            { id: 5, title: "Learn Fast", author: "Amy", genre: "Tech", rating: 4.2, year: 2021 },
+            { id: 6, title: "JS Mastery2", author: "Kyle2", genre: "Tech", rating: 4.9, year: 2022 },
+            { id: 7, title: "Fantasy World2", author: "Martin", genre: "Fantasy", rating: 5.0, year: 2023 },
+            { id: 8, title: "Ancient Empires", author: "Clara", genre: "History", rating: 3.9, year: 2005 },
+            { id: 9, title: "The JavaScript Path", author: "Tina", genre: "Tech", rating: 4.5, year: 2024 },
+            { id: 10, title: "Love in the Console", author: "Jane", genre: "Romance", rating: 4.3, year: 2020 },
+            { id: 11, title: "Magic Realms", author: "Leo", genre: "Fantasy", rating: 4.6, year: 2021 },
+            { id: 12, title: "The Great War", author: "Smith", genre: "History", rating: 4.0, year: 2010 },
+            { id: 13, title: "Code & Heart", author: "Anna", genre: "Romance", rating: 4.9, year: 2023 },
+            { id: 14, title: "Quick Algorithms", author: "Kyle", genre: "Tech", rating: 4.4, year: 2018 },
+            { id: 15, title: "Tales of Eloria", author: "Martin", genre: "Fantasy", rating: 4.7, year: 2017 }
+        ];
+
+
+       dummyBookData.forEach(book => { this.addBook(book)});
+            const dummyUsersData = [
+                {
+                    name: 'Misho',
+                    borrowed: [{
+                        bookId: 1,
+                        borrowDate: new Date('2025-07-01T10:00:00Z'),
+                        dueDate: new Date('2025-07-15T10:00:00Z')
+                    },{
+                        bookId: 4,
+                        borrowDate: new Date('2025-07-01T10:00:00Z'),
+                        dueDate: new Date('2025-07-15T10:00:00Z')
+                    }],
+                    penaltyPoints: 0
+                },
+                {
+                    name: 'Luka',
+                    borrowed: [
+                    {
+                        bookId: 2,
+                        borrowDate: new Date('2025-07-10T12:00:00Z'),
+                        dueDate: new Date('2025-07-24T12:00:00Z')
+                    }
+                    ],
+                    penaltyPoints: 1
+                },
+                {
+                    name: 'Nino',
+                    borrowed: [
+                        {
+                            bookId: 5,
+                            borrowDate: new Date('2025-06-30T10:00:00Z'),
+                            dueDate: new Date('2025-07-13T10:00:00Z')
+                        }],
+                    penaltyPoints: 0
+                },
+                {
+                    name: 'Saba',
+                    borrowed: [
+                    {
+                        bookId: 4,
+                        borrowDate: new Date('2025-06-25T08:00:00Z'),
+                        dueDate: new Date('2025-07-09T08:00:00Z')
+                    }
+                    ],
+                    penaltyPoints: 3
+                },
+                {
+                    name: 'Ana',
+                    borrowed: [
+                        {
+                            bookId: 3,
+                            borrowDate: new Date('2025-06-20T10:00:00Z'),
+                            dueDate: new Date('2025-07-04T10:00:00Z')
+                        }
+                    ],
+                    penaltyPoints: 0
+                },
+                {
+                    name: 'Mari',
+                    borrowed: [
+                        {
+                            bookId: 3,
+                            borrowDate: new Date('2025-06-20T10:00:00Z'),
+                            dueDate: new Date('2025-07-04T10:00:00Z')
+                        }
+                    ],
+                    penaltyPoints: 0
+                }
+            ];
+
+
+        dummyUsersData.forEach(user => {
+            this.users.push(user)
+        });
+    }
     
 }
+
 const db = new VirtualLibrary
 
-dummyBookData = [
-    { id: 1, title: "JS Mastery", author: "Kyle", genre: "Tech", rating: 4.8, year: 2020 },
-    { id: 2, title: "History of Europe", author: "Smith", genre: "History", rating: 4.1, year: 2008 },
-    { id: 3, title: "Romance of Code", author: "Jane", genre: "Romance", rating: 4.7, year: 2019 },
-    { id: 4, title: "Fantasy World", author: "Martin", genre: "Fantasy", rating: 4.9, year: 2022 },
-    { id: 5, title: "Learn Fast", author: "Amy", genre: "Tech", rating: 4.2, year: 2021 },
-    { id: 6, title: "JS Mastery2", author: "Kyle2", genre: "Tech", rating: 4.9, year: 2022 },
-    { id: 7, title: "Fantasy World2", author: "Martin", genre: "Fantasy", rating: 5, year: 2023 },
-]
 
-dummyUsersData = [
-    {
-        name: 'Misho',
-        borrowed: [{
-            bookId: 1,
-            borrowDate: new Date('2025-07-01T10:00:00Z'),
-            dueDate: new Date('2025-07-15T10:00:00Z')
-        },{
-            bookId: 4,
-            borrowDate: new Date('2025-07-01T10:00:00Z'),
-            dueDate: new Date('2025-07-15T10:00:00Z')
-        }],
-        penaltyPoints: 0
-    },
-  {
-    name: 'Luka',
-    borrowed: [
-      {
-        bookId: 2,
-        borrowDate: new Date('2025-07-10T12:00:00Z'),
-        dueDate: new Date('2025-07-24T12:00:00Z')
-      }
-    ],
-    penaltyPoints: 1
-  },
-  {
-    name: 'Nino',
-    borrowed: [
-        {
-            bookId: 5,
-            borrowDate: new Date('2025-06-30T10:00:00Z'),
-            dueDate: new Date('2025-07-13T10:00:00Z')
-        }],
-    penaltyPoints: 0
-  },
-  {
-    name: 'Saba',
-    borrowed: [
-      {
-        bookId: 4,
-        borrowDate: new Date('2025-06-25T08:00:00Z'),
-        dueDate: new Date('2025-07-09T08:00:00Z')
-      }
-    ],
-    penaltyPoints: 3
-  },
-  {
-    name: 'Ana',
-    borrowed: [
-        {
-            bookId: 3,
-            borrowDate: new Date('2025-06-20T10:00:00Z'),
-            dueDate: new Date('2025-07-04T10:00:00Z')
-        }
-    ],
-    penaltyPoints: 0
-  }
-];
-
-dummyBookData.forEach(book => {
-    db.addBook(book)
-});
-
-dummyUsersData.forEach(user => {
-    db.users.push(user)
-});
-
-
-console.log(db.recommendBooks("Misho"))
-
-// db.removeBook(2);
-
-//  - check borrowed books from user-1
-// console.log("borrowed book: ",db.users[0].borrowed)
-// db.returnBook("misho", 1)
-// console.log(db.searchBooksBy('author', 'Kyle'));
-// console.log(db.books)
-
-// Searchbar (improvement:feedbacks)
-
-// db.getTopRatedBooks(10);
-// db.getMostPopularBooks(3);
-
-// console.log(db.users)
-// db.checkOverdueUsers()
-// console.log(db.users)
+db.initMockData();
