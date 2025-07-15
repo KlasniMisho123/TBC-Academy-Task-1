@@ -260,8 +260,8 @@ db.initMockData();
 
 // db.checkOverdueUsers();
 
-console.log(db.getMostPopularBooks(10));
+// console.log(db.getMostPopularBooks(10));
 
-db.returnBook("Misho", 1)
+// db.returnBook("Misho", 1)
 
-db.printUserSummary("Misho");
+// db.printUserSummary("Misho");
