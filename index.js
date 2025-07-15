@@ -128,6 +128,16 @@ class VirtualLibrary {
         return result;
     }
 
+    recommendBooks(userName) {
+        const user = this.users.find(u => u.name === userName)
+        if(!user) return []
+        
+        const borrowedGenres = user.borrowed
+            .map(entry => this.book.find(b => b.id === entry.bookId)?.genre)
+            .filter(Boolean)
+
+        console.log(borrowedGenres)
+    }
     
 }
 const db = new VirtualLibrary
@@ -204,6 +214,7 @@ dummyUsersData.forEach(user => {
 });
 
 
+db.recommendBooks("misho")
 
 // db.removeBook(2);
 
