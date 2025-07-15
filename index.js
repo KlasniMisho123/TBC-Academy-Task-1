@@ -69,7 +69,7 @@ class VirtualLibrary {
         if(today > dueDate) {
             const overdueDays = Math.ceil((today - dueDate) / (1000 * 60 * 60 * 24));
             user.penaltyPoints += overdueDays;
-            console.log(`Book returned late! ${overdueDays} days overdue. Penalty points(${penaltyPoints} applied. )`)
+            console.log(`Book returned late! ${overdueDays} days overdue. Penalty points (${user.penaltyPoints}) applied.`);
         } else {
             console.log("Thank you for returning book on time! ")
         }
@@ -89,8 +89,7 @@ class VirtualLibrary {
                 console.log(`Top ${limit} Rated Book In our Library: `)
             }
 
-        const result = [...this.books].sort((a,b) => a.borrowCount - b.borrowCount).slice(0,limit)
-        console.log(result);
+        const result = [...this.books].sort((a, b) => b.rating - a.rating).slice(0, limit);
         return(result);
     }
 
@@ -99,9 +98,7 @@ class VirtualLibrary {
             else {
                 console.log(` ${limit} Most Popular Book In our Library:  `)
             }
-        const result = [...this.books].sort((a,b) => a.borrowCount - b.borrowCount).slice(0,limit)
-        
-        console.log(result);
+        const result = [...this.books].sort((a, b) => b.borrowCount - a.borrowCount).slice(0, limit);
         return(result);
     }
 
@@ -110,11 +107,12 @@ class VirtualLibrary {
         const result = [];
 
         this.users.forEach(user => {
-            user["borrowed"].forEach(borrowed => {
+            user.borrowed.forEach(borrowed => {
             if (currentDate > borrowed.dueDate) {
                 const overdueDays = Math.ceil(
                 (currentDate - borrowed.dueDate) / (1000 * 60 * 60 * 24)
                 );
+                user.penaltyPoints += overdueDays
                 result.push({
                 userName: user.name,
                 bookId: borrowed.bookId,
@@ -129,23 +127,38 @@ class VirtualLibrary {
     }
 
     recommendBooks(userName) {
-            const user = this.users.find(u => u.name === userName)
-            if(!user) return []
-            
-            const borrowedGenres = user.borrowed
-                .map(entry => this.books.find(b => b.id === entry.bookId)?.genre)
-                .filter(Boolean)
+        const user = this.users.find(u => u.name === userName)
+        if(!user) return []
+        
+        const borrowedGenres = user.borrowed
+            .map(entry => this.books.find(b => b.id === entry.bookId)?.genre)
+            .filter(Boolean)
 
-            const genresSet = new Set(borrowedGenres)
-            const borrowedIds = new Set(user.borrowed.map(entry => entry.bookId))
+        const genresSet = new Set(borrowedGenres)
+        const borrowedIds = new Set(user.borrowed.map(entry => entry.bookId))
 
-            return this.books
-                .filter(book => book.available && !borrowedIds.has(book.id) && genresSet.has(book.genre))
-                .sort((a,b) => b.rating - a.rating)
+        return this.books
+            .filter(book => book.available && !borrowedIds.has(book.id) && genresSet.has(book.genre))
+            .sort((a,b) => b.rating - a.rating)
     }
 
-    printUserSummary(){
+    printUserSummary(userName){
+        const user = this.users.find(u => u.name === userName);
+        if(!user) return(console.log("User Not Found. "))
 
+        console.log(`User: ${user.name}`);
+        console.log(`Penalty Points: ${user.penaltyPoints}`);
+        if(user.borrowed.length === 0) {
+            console.log("User have no borrowed books.")
+            return
+        }
+
+        user.borrowed.forEach((borrowed) => {
+            const book = this.books.find(b => b.id === borrowed.bookId)
+            const overdue = new Date() > new Date(borrowed.dueDate)
+            console.log(`Title: ${book.title} `)
+            console.log(`Due To: ${borrowed.dueDate.toDateString()}. ${overdue ? "[OVERDUE]" : ""}`)
+        })
     }
 
     initMockData() {
@@ -160,11 +173,6 @@ class VirtualLibrary {
             { id: 8, title: "Ancient Empires", author: "Clara", genre: "History", rating: 3.9, year: 2005 },
             { id: 9, title: "The JavaScript Path", author: "Tina", genre: "Tech", rating: 4.5, year: 2024 },
             { id: 10, title: "Love in the Console", author: "Jane", genre: "Romance", rating: 4.3, year: 2020 },
-            { id: 11, title: "Magic Realms", author: "Leo", genre: "Fantasy", rating: 4.6, year: 2021 },
-            { id: 12, title: "The Great War", author: "Smith", genre: "History", rating: 4.0, year: 2010 },
-            { id: 13, title: "Code & Heart", author: "Anna", genre: "Romance", rating: 4.9, year: 2023 },
-            { id: 14, title: "Quick Algorithms", author: "Kyle", genre: "Tech", rating: 4.4, year: 2018 },
-            { id: 15, title: "Tales of Eloria", author: "Martin", genre: "Fantasy", rating: 4.7, year: 2017 }
         ];
 
 
@@ -184,7 +192,7 @@ class VirtualLibrary {
                     penaltyPoints: 0
                 },
                 {
-                    name: 'Luka',
+                    name: 'Zoe',
                     borrowed: [
                     {
                         bookId: 2,
@@ -205,7 +213,7 @@ class VirtualLibrary {
                     penaltyPoints: 0
                 },
                 {
-                    name: 'Saba',
+                    name: 'Ame',
                     borrowed: [
                     {
                         bookId: 4,
@@ -225,23 +233,22 @@ class VirtualLibrary {
                         }
                     ],
                     penaltyPoints: 0
-                },
-                {
-                    name: 'Mari',
-                    borrowed: [
-                        {
-                            bookId: 3,
-                            borrowDate: new Date('2025-06-20T10:00:00Z'),
-                            dueDate: new Date('2025-07-04T10:00:00Z')
-                        }
-                    ],
-                    penaltyPoints: 0
                 }
-            ];
-
+        ];
 
         dummyUsersData.forEach(user => {
             this.users.push(user)
+        });
+
+
+        this.users.forEach(user => {
+            user.borrowed.forEach(borrowedEntry => {
+            const book = this.books.find(book => book.id === borrowedEntry.bookId);
+            if (book) {
+                book.available = false;
+                book.borrowCount++;
+            }
+            });
         });
     }
     
@@ -249,5 +256,12 @@ class VirtualLibrary {
 
 const db = new VirtualLibrary
 
-
 db.initMockData();
+
+// db.checkOverdueUsers();
+
+console.log(db.getMostPopularBooks(10));
+
+db.returnBook("Misho", 1)
+
+db.printUserSummary("Misho");
