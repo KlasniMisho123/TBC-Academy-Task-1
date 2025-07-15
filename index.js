@@ -80,10 +80,27 @@ class VirtualLibrary {
             if (param === 'rating') return book.rating >= value;
             if (param === 'year') return book.year === value || (typeof value === 'object' && value.condition === 'after' ? book.year > value.year : book.year < value.year);
             return book[param] === value;
-            });
-        }
-}
+        });
+    }
 
+    getTopRatedBooks(limit) {
+         if(limit > this.books.length) console.log(`Only ${this.books.length} Book is in Library, Top ${this.books.length} Rated Books in our Library: `)
+            else {
+                console.log(`Top ${limit} Rated Book In our Library: `)
+            }
+        console.log([...this.books].sort((a,b) => a.rating - b.rating)
+        .slice(0,limit))
+    }
+
+    getMostPopularBooks(limit) {
+        if(limit > this.books.length) console.log(`Only ${this.books.length} Book is in Library, ${this.books.length} Most Popular Book in our Library: `)
+            else {
+                console.log(` ${limit} Most Popular Book In our Library:  `)
+            }
+        console.log([...this.books].sort((a,b) => a.borrowCount - b.borrowCount)
+        .slice(0,limit))
+    }
+}
 const db = new VirtualLibrary
 
 dummyBookData = [
@@ -105,7 +122,10 @@ dummyBookData.forEach(book => {
 //  - check borrowed books from user-1
 // console.log("borrowed book: ",db.users[0].borrowed)
 // db.returnBook("misho", 1)
-// db.searchBooksBy('genre', 'Tech');
+// console.log(db.searchBooksBy('author', 'Kyle'));
 // console.log(db.books)
 
 // Searchbar (improvement:feedbacks)
+
+// db.getTopRatedBooks(5);
+db.getMostPopularBooks(5);
