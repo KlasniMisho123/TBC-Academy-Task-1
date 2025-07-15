@@ -129,14 +129,19 @@ class VirtualLibrary {
     }
 
     recommendBooks(userName) {
-        const user = this.users.find(u => u.name === userName)
-        if(!user) return []
-        
-        const borrowedGenres = user.borrowed
-            .map(entry => this.book.find(b => b.id === entry.bookId)?.genre)
-            .filter(Boolean)
+            const user = this.users.find(u => u.name === userName)
+            if(!user) return []
+            
+            const borrowedGenres = user.borrowed
+                .map(entry => this.books.find(b => b.id === entry.bookId)?.genre)
+                .filter(Boolean)
 
-        console.log(borrowedGenres)
+            const genresSet = new Set(borrowedGenres)
+            const borrowedIds = new Set(user.borrowed.map(entry => entry.bookId))
+
+            return this.books
+                .filter(book => book.available && !borrowedIds.has(book.id) && genresSet.has(book.genre))
+                .sort((a,b) => b.rating - a.rating)
     }
     
 }
@@ -148,6 +153,8 @@ dummyBookData = [
     { id: 3, title: "Romance of Code", author: "Jane", genre: "Romance", rating: 4.7, year: 2019 },
     { id: 4, title: "Fantasy World", author: "Martin", genre: "Fantasy", rating: 4.9, year: 2022 },
     { id: 5, title: "Learn Fast", author: "Amy", genre: "Tech", rating: 4.2, year: 2021 },
+    { id: 6, title: "JS Mastery2", author: "Kyle2", genre: "Tech", rating: 4.9, year: 2022 },
+    { id: 7, title: "Fantasy World2", author: "Martin", genre: "Fantasy", rating: 5, year: 2023 },
 ]
 
 dummyUsersData = [
@@ -155,6 +162,10 @@ dummyUsersData = [
         name: 'Misho',
         borrowed: [{
             bookId: 1,
+            borrowDate: new Date('2025-07-01T10:00:00Z'),
+            dueDate: new Date('2025-07-15T10:00:00Z')
+        },{
+            bookId: 4,
             borrowDate: new Date('2025-07-01T10:00:00Z'),
             dueDate: new Date('2025-07-15T10:00:00Z')
         }],
@@ -214,7 +225,7 @@ dummyUsersData.forEach(user => {
 });
 
 
-db.recommendBooks("misho")
+console.log(db.recommendBooks("Misho"))
 
 // db.removeBook(2);
 
