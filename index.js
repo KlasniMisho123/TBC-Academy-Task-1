@@ -88,8 +88,10 @@ class VirtualLibrary {
             else {
                 console.log(`Top ${limit} Rated Book In our Library: `)
             }
-        console.log([...this.books].sort((a,b) => a.rating - b.rating)
-        .slice(0,limit))
+
+        const result = [...this.books].sort((a,b) => a.borrowCount - b.borrowCount).slice(0,limit)
+        console.log(result);
+        return(result);
     }
 
     getMostPopularBooks(limit) {
@@ -97,9 +99,36 @@ class VirtualLibrary {
             else {
                 console.log(` ${limit} Most Popular Book In our Library:  `)
             }
-        console.log([...this.books].sort((a,b) => a.borrowCount - b.borrowCount)
-        .slice(0,limit))
+        const result = [...this.books].sort((a,b) => a.borrowCount - b.borrowCount).slice(0,limit)
+        
+        console.log(result);
+        return(result);
     }
+
+    checkOverdueUsers() {
+        const currentDate = new Date();
+        const result = [];
+
+        this.users.forEach(user => {
+            user["borrowed"].forEach(borrowed => {
+            if (currentDate > borrowed.dueDate) {
+                const overdueDays = Math.ceil(
+                (currentDate - borrowed.dueDate) / (1000 * 60 * 60 * 24)
+                );
+                result.push({
+                userName: user.name,
+                bookId: borrowed.bookId,
+                overdueDays: overdueDays
+                });
+            }
+            });
+        });
+
+        console.log(result);
+        return result;
+    }
+
+    
 }
 const db = new VirtualLibrary
 
@@ -111,11 +140,70 @@ dummyBookData = [
     { id: 5, title: "Learn Fast", author: "Amy", genre: "Tech", rating: 4.2, year: 2021 },
 ]
 
+dummyUsersData = [
+    {
+        name: 'Misho',
+        borrowed: [{
+            bookId: 1,
+            borrowDate: new Date('2025-07-01T10:00:00Z'),
+            dueDate: new Date('2025-07-15T10:00:00Z')
+        }],
+        penaltyPoints: 0
+    },
+  {
+    name: 'Luka',
+    borrowed: [
+      {
+        bookId: 2,
+        borrowDate: new Date('2025-07-10T12:00:00Z'),
+        dueDate: new Date('2025-07-24T12:00:00Z')
+      }
+    ],
+    penaltyPoints: 1
+  },
+  {
+    name: 'Nino',
+    borrowed: [
+        {
+            bookId: 5,
+            borrowDate: new Date('2025-06-30T10:00:00Z'),
+            dueDate: new Date('2025-07-13T10:00:00Z')
+        }],
+    penaltyPoints: 0
+  },
+  {
+    name: 'Saba',
+    borrowed: [
+      {
+        bookId: 4,
+        borrowDate: new Date('2025-06-25T08:00:00Z'),
+        dueDate: new Date('2025-07-09T08:00:00Z')
+      }
+    ],
+    penaltyPoints: 3
+  },
+  {
+    name: 'Ana',
+    borrowed: [
+        {
+            bookId: 3,
+            borrowDate: new Date('2025-06-20T10:00:00Z'),
+            dueDate: new Date('2025-07-04T10:00:00Z')
+        }
+    ],
+    penaltyPoints: 0
+  }
+];
+
 dummyBookData.forEach(book => {
     db.addBook(book)
 });
 
-// db.borrowBook("misho", 1)
+dummyUsersData.forEach(user => {
+    db.users.push(user)
+});
+
+
 
 // db.removeBook(2);
 
@@ -127,5 +215,9 @@ dummyBookData.forEach(book => {
 
 // Searchbar (improvement:feedbacks)
 
-// db.getTopRatedBooks(5);
-db.getMostPopularBooks(5);
+// db.getTopRatedBooks(10);
+// db.getMostPopularBooks(3);
+
+// console.log(db.users)
+// db.checkOverdueUsers()
+// console.log(db.users)
